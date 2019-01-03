@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		363853AA200465BA00899B11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 363853A9200465BA00899B11 /* AppDelegate.m */; };
-		363853AD200465BA00899B11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363853AC200465BA00899B11 /* ViewController.m */; };
 		363853B0200465BA00899B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363853AE200465BA00899B11 /* Main.storyboard */; };
 		363853B2200465BA00899B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363853B1200465BA00899B11 /* Assets.xcassets */; };
 		363853B5200465BA00899B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363853B3200465BA00899B11 /* LaunchScreen.storyboard */; };
@@ -47,6 +46,19 @@
 		3638545F2004C4EF00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3638545E2004C4EF00899B11 /* README.md */; };
 		363854612004C4FA00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 363854602004C4F900899B11 /* README.md */; };
 		92A34F38F4AC27A3C3ADFC02 /* libPods-iOSBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D497ADAEE224F0451F225E /* libPods-iOSBase.a */; };
+		EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBCD21DE49B400E3DBA0 /* LoginViewController.m */; };
+		EE98FBD621DE49B400E3DBA0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBCF21DE49B400E3DBA0 /* RegisterViewController.m */; };
+		EE98FBD721DE49B400E3DBA0 /* ForgetPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBD021DE49B400E3DBA0 /* ForgetPwdController.m */; };
+		EE98FBD821DE49B400E3DBA0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE98FBD421DE49B400E3DBA0 /* Login.storyboard */; };
+		EE98FBDB21DE4DFF00E3DBA0 /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBD921DE4DFF00E3DBA0 /* TabbarViewController.m */; };
+		EE98FBEF21DE503100E3DBA0 /* QuanziViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBED21DE503100E3DBA0 /* QuanziViewController.m */; };
+		EE98FBF021DE503100E3DBA0 /* QuanziViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE98FBEE21DE503100E3DBA0 /* QuanziViewController.xib */; };
+		EE98FBF421DE512A00E3DBA0 /* YundongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBF221DE512A00E3DBA0 /* YundongViewController.m */; };
+		EE98FBF521DE512A00E3DBA0 /* YundongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE98FBF321DE512A00E3DBA0 /* YundongViewController.xib */; };
+		EE98FBF921DE51DD00E3DBA0 /* JingpaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBF721DE51DD00E3DBA0 /* JingpaiViewController.m */; };
+		EE98FBFA21DE51DD00E3DBA0 /* JingpaiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE98FBF821DE51DD00E3DBA0 /* JingpaiViewController.xib */; };
+		EE98FBFE21DE529B00E3DBA0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBFC21DE529B00E3DBA0 /* MineViewController.m */; };
+		EE98FBFF21DE529B00E3DBA0 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE98FBFD21DE529B00E3DBA0 /* MineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +83,6 @@
 		363853A5200465BA00899B11 /* iOSBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		363853A8200465BA00899B11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		363853A9200465BA00899B11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		363853AB200465BA00899B11 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		363853AC200465BA00899B11 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		363853AF200465BA00899B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		363853B1200465BA00899B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		363853B4200465BA00899B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +143,27 @@
 		363854602004C4F900899B11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		363CBD582196F9CC00D616E6 /* FlowAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowAPI.h; sourceTree = "<group>"; };
 		6D47F575D57BBA9836E5F5A5 /* Pods-iOSBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase.release.xcconfig"; sourceTree = "<group>"; };
+		EE98FBCD21DE49B400E3DBA0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EE98FBCE21DE49B400E3DBA0 /* ForgetPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdController.h; sourceTree = "<group>"; };
+		EE98FBCF21DE49B400E3DBA0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		EE98FBD021DE49B400E3DBA0 /* ForgetPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdController.m; sourceTree = "<group>"; };
+		EE98FBD121DE49B400E3DBA0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EE98FBD221DE49B400E3DBA0 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		EE98FBD421DE49B400E3DBA0 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EE98FBD921DE4DFF00E3DBA0 /* TabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
+		EE98FBDA21DE4DFF00E3DBA0 /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
+		EE98FBEC21DE503100E3DBA0 /* QuanziViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuanziViewController.h; sourceTree = "<group>"; };
+		EE98FBED21DE503100E3DBA0 /* QuanziViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuanziViewController.m; sourceTree = "<group>"; };
+		EE98FBEE21DE503100E3DBA0 /* QuanziViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuanziViewController.xib; sourceTree = "<group>"; };
+		EE98FBF121DE512A00E3DBA0 /* YundongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YundongViewController.h; sourceTree = "<group>"; };
+		EE98FBF221DE512A00E3DBA0 /* YundongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YundongViewController.m; sourceTree = "<group>"; };
+		EE98FBF321DE512A00E3DBA0 /* YundongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YundongViewController.xib; sourceTree = "<group>"; };
+		EE98FBF621DE51DD00E3DBA0 /* JingpaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JingpaiViewController.h; sourceTree = "<group>"; };
+		EE98FBF721DE51DD00E3DBA0 /* JingpaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JingpaiViewController.m; sourceTree = "<group>"; };
+		EE98FBF821DE51DD00E3DBA0 /* JingpaiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JingpaiViewController.xib; sourceTree = "<group>"; };
+		EE98FBFB21DE529B00E3DBA0 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		EE98FBFC21DE529B00E3DBA0 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		EE98FBFD21DE529B00E3DBA0 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		FC0F68CA62C14D611F9401DA /* Pods-iOSBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,8 +234,6 @@
 				363853DA20046C1B00899B11 /* Utils */,
 				363853A8200465BA00899B11 /* AppDelegate.h */,
 				363853A9200465BA00899B11 /* AppDelegate.m */,
-				363853AB200465BA00899B11 /* ViewController.h */,
-				363853AC200465BA00899B11 /* ViewController.m */,
 				363853AE200465BA00899B11 /* Main.storyboard */,
 				363853B1200465BA00899B11 /* Assets.xcassets */,
 				363853B3200465BA00899B11 /* LaunchScreen.storyboard */,
@@ -249,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				363853E220046DF500899B11 /* README.md */,
+				363CBD582196F9CC00D616E6 /* FlowAPI.h */,
 				363853F5200495C100899B11 /* PrefixHeader.pch */,
 			);
 			path = Define;
@@ -270,6 +300,8 @@
 				3638542820049D8500899B11 /* BaseNavViewController.m */,
 				3638542A20049D8500899B11 /* BaseViewController.h */,
 				3638542920049D8500899B11 /* BaseViewController.m */,
+				EE98FBDA21DE4DFF00E3DBA0 /* TabbarViewController.h */,
+				EE98FBD921DE4DFF00E3DBA0 /* TabbarViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -282,7 +314,6 @@
 				363854212004997200899B11 /* NetworkSingleton.m */,
 				363854222004997200899B11 /* RequestParams.h */,
 				363854242004997200899B11 /* RequestParams.m */,
-				363CBD582196F9CC00D616E6 /* FlowAPI.h */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -290,6 +321,11 @@
 		363853ED2004706800899B11 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EE98FBE421DE501600E3DBA0 /* Jingpai */,
+				EE98FBDC21DE501600E3DBA0 /* Mine */,
+				EE98FBE821DE501600E3DBA0 /* Quanzi */,
+				EE98FBE021DE501600E3DBA0 /* Yundong */,
+				EE98FBCB21DE49B400E3DBA0 /* Login */,
 				363853EE2004706800899B11 /* README.md */,
 			);
 			path = Modules;
@@ -371,6 +407,172 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE98FBCB21DE49B400E3DBA0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBCC21DE49B400E3DBA0 /* Controllers */,
+				EE98FBD321DE49B400E3DBA0 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EE98FBCC21DE49B400E3DBA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBD121DE49B400E3DBA0 /* LoginViewController.h */,
+				EE98FBCD21DE49B400E3DBA0 /* LoginViewController.m */,
+				EE98FBCE21DE49B400E3DBA0 /* ForgetPwdController.h */,
+				EE98FBD021DE49B400E3DBA0 /* ForgetPwdController.m */,
+				EE98FBD221DE49B400E3DBA0 /* RegisterViewController.h */,
+				EE98FBCF21DE49B400E3DBA0 /* RegisterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE98FBD321DE49B400E3DBA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBD421DE49B400E3DBA0 /* Login.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE98FBDC21DE501600E3DBA0 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBDD21DE501600E3DBA0 /* Models */,
+				EE98FBDE21DE501600E3DBA0 /* Controllers */,
+				EE98FBDF21DE501600E3DBA0 /* Views */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		EE98FBDD21DE501600E3DBA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE98FBDE21DE501600E3DBA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBFB21DE529B00E3DBA0 /* MineViewController.h */,
+				EE98FBFC21DE529B00E3DBA0 /* MineViewController.m */,
+				EE98FBFD21DE529B00E3DBA0 /* MineViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE98FBDF21DE501600E3DBA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE98FBE021DE501600E3DBA0 /* Yundong */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBE121DE501600E3DBA0 /* Models */,
+				EE98FBE221DE501600E3DBA0 /* Controllers */,
+				EE98FBE321DE501600E3DBA0 /* Views */,
+			);
+			path = Yundong;
+			sourceTree = "<group>";
+		};
+		EE98FBE121DE501600E3DBA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE98FBE221DE501600E3DBA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBF121DE512A00E3DBA0 /* YundongViewController.h */,
+				EE98FBF221DE512A00E3DBA0 /* YundongViewController.m */,
+				EE98FBF321DE512A00E3DBA0 /* YundongViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE98FBE321DE501600E3DBA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE98FBE421DE501600E3DBA0 /* Jingpai */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBE521DE501600E3DBA0 /* Models */,
+				EE98FBE621DE501600E3DBA0 /* Controllers */,
+				EE98FBE721DE501600E3DBA0 /* Views */,
+			);
+			path = Jingpai;
+			sourceTree = "<group>";
+		};
+		EE98FBE521DE501600E3DBA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE98FBE621DE501600E3DBA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBF621DE51DD00E3DBA0 /* JingpaiViewController.h */,
+				EE98FBF721DE51DD00E3DBA0 /* JingpaiViewController.m */,
+				EE98FBF821DE51DD00E3DBA0 /* JingpaiViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE98FBE721DE501600E3DBA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE98FBE821DE501600E3DBA0 /* Quanzi */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBE921DE501600E3DBA0 /* Models */,
+				EE98FBEA21DE501600E3DBA0 /* Controllers */,
+				EE98FBEB21DE501600E3DBA0 /* Views */,
+			);
+			path = Quanzi;
+			sourceTree = "<group>";
+		};
+		EE98FBE921DE501600E3DBA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE98FBEA21DE501600E3DBA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE98FBEC21DE503100E3DBA0 /* QuanziViewController.h */,
+				EE98FBED21DE503100E3DBA0 /* QuanziViewController.m */,
+				EE98FBEE21DE503100E3DBA0 /* QuanziViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE98FBEB21DE501600E3DBA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,7 +642,7 @@
 				TargetAttributes = {
 					363853A4200465BA00899B11 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					363853BC200465BA00899B11 = {
 						CreatedOnToolsVersion = 9.2;
@@ -481,12 +683,17 @@
 			files = (
 				363853E620046DFC00899B11 /* README.md in Resources */,
 				363853B5200465BA00899B11 /* LaunchScreen.storyboard in Resources */,
+				EE98FBD821DE49B400E3DBA0 /* Login.storyboard in Resources */,
 				3638545B2004C13200899B11 /* README.md in Resources */,
 				3638545D2004C4BB00899B11 /* README.md in Resources */,
 				363853B2200465BA00899B11 /* Assets.xcassets in Resources */,
+				EE98FBF521DE512A00E3DBA0 /* YundongViewController.xib in Resources */,
 				363854502004C0A600899B11 /* close_icon@2x.png in Resources */,
 				363853E920046E0400899B11 /* README.md in Resources */,
+				EE98FBF021DE503100E3DBA0 /* QuanziViewController.xib in Resources */,
+				EE98FBFF21DE529B00E3DBA0 /* MineViewController.xib in Resources */,
 				363854612004C4FA00899B11 /* README.md in Resources */,
+				EE98FBFA21DE51DD00E3DBA0 /* JingpaiViewController.xib in Resources */,
 				363854572004C0C200899B11 /* README.md in Resources */,
 				363853E320046DF500899B11 /* README.md in Resources */,
 				363854522004C0A600899B11 /* sure_placeholder_error@3x.png in Resources */,
@@ -568,18 +775,25 @@
 			files = (
 				3638542C20049D8500899B11 /* BaseViewController.m in Sources */,
 				363854552004C0A600899B11 /* SureWebViewController.m in Sources */,
+				EE98FBFE21DE529B00E3DBA0 /* MineViewController.m in Sources */,
 				363854192004981D00899B11 /* UIButton+XYButton.m in Sources */,
 				363854162004981D00899B11 /* SPUtil.m in Sources */,
 				363854172004981D00899B11 /* GTMBase64.m in Sources */,
-				363853AD200465BA00899B11 /* ViewController.m in Sources */,
+				EE98FBD721DE49B400E3DBA0 /* ForgetPwdController.m in Sources */,
 				3638541F2004981D00899B11 /* Util.m in Sources */,
 				363853B8200465BA00899B11 /* main.m in Sources */,
+				EE98FBD621DE49B400E3DBA0 /* RegisterViewController.m in Sources */,
+				EE98FBEF21DE503100E3DBA0 /* QuanziViewController.m in Sources */,
+				EE98FBF921DE51DD00E3DBA0 /* JingpaiViewController.m in Sources */,
 				3638541B2004981D00899B11 /* UIColor+Extend.m in Sources */,
+				EE98FBDB21DE4DFF00E3DBA0 /* TabbarViewController.m in Sources */,
 				3638541D2004981D00899B11 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				363854262004997200899B11 /* RequestParams.m in Sources */,
 				3638542B20049D8500899B11 /* BaseNavViewController.m in Sources */,
 				363854252004997200899B11 /* NetworkSingleton.m in Sources */,
+				EE98FBF421DE512A00E3DBA0 /* YundongViewController.m in Sources */,
 				3638541C2004981D00899B11 /* UIView+Extend.m in Sources */,
+				EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */,
 				363853AA200465BA00899B11 /* AppDelegate.m in Sources */,
 				3638541A2004981D00899B11 /* UICollectionView+IndexPath.m in Sources */,
 				363854182004981D00899B11 /* NSString+MD5.m in Sources */,
@@ -746,14 +960,15 @@
 			baseConfigurationReference = FC0F68CA62C14D611F9401DA /* Pods-iOSBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HR6HGC9SU2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSBase/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wb.base.iOSBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -763,14 +978,15 @@
 			baseConfigurationReference = 6D47F575D57BBA9836E5F5A5 /* Pods-iOSBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HR6HGC9SU2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSBase/Define/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wb.base.iOSBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

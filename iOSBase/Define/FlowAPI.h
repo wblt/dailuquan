@@ -40,11 +40,27 @@
 //获取屏幕宽高
 #define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define navHeight ((KScreenWidth >= 375 && KScreenHeight >= 812) ? 88.0 : 64.0)
 
 // 主服务器地址
-#define SERVER_IP         @""
+#define SERVER_IP         @"http://yg.welcare-tech.com.cn"
 
 // 登录
-#define API_LOGIN       SERVER_IP@""
+#define api_login       SERVER_IP@"/tpiot/app/login"
+
+// 获取验证码
+#define api_vercode     SERVER_IP@"/tpiot/app/vercode"
+
+// 重置密码
+#define api_restpwd     SERVER_IP@"/tpiot/app/restpwd"
+
+// 注册
+#define api_register     SERVER_IP@"/tpiot/app/register"
+
+// 获取用户信息
+#define api_getusermessage     SERVER_IP@"/tpiot/app/getusermessage"
+
+// 更新用户信息
+#define api_upuserinfodata     SERVER_IP@"/tpiot/app/upuserinfodata"
 
 #endif /* FlowAPI_h */
