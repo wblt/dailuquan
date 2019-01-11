@@ -43,6 +43,8 @@
 
 #pragma mark - 登陆
 - (IBAction)loginAction:(id)sender {
+    [SPUtil setBool:YES forKey:k_app_login];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     if (self.phoneNumFiled.text.length != 11) {
         [SVProgressHUD showInfoWithStatus:@"请输入正确的手机号码"];
         return;
@@ -63,7 +65,7 @@
 //            [SPUtil setObject:self.phoneNumFiled.text forKey:k_app_username];
 //            [SPUtil setObject:self.passwordFiled.text forKey:k_app_password];
 //            [SPUtil setObject:dic[@"userid"] forKey:k_app_uid];
-//            [SPUtil setObject:@"1" forKey:k_app_login];
+//            [SPUtil setBool:YES forKey:k_app_login];
 //            HomeViewController *homevc = [[HomeViewController alloc] init];
 //            LeftViewController *left = [[LeftViewController alloc] init];
 //            BaseNavViewController *homeNav = [[BaseNavViewController alloc] initWithRootViewController:homevc];

@@ -20,12 +20,19 @@ PODS:
   - BGFMDB/BG (2.0.13):
     - BGFMDB/FMDB
   - BGFMDB/FMDB (2.0.13)
+  - GPUImage (0.1.7)
   - IQKeyboardManager (5.0.7)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.1)
+  - MOFSPickerManager (2.1.3)
+  - PGDatePicker (1.5.13):
+    - PGPickerView
+  - PGPickerView (1.3.5)
   - SDAutoLayout (2.1.9)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
@@ -34,40 +41,36 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - BGFMDB (~> 2.0.9)
+  - GPUImage
   - IQKeyboardManager
   - Masonry
   - MBProgressHUD (~> 1.0.0)
   - MJExtension
   - MJRefresh
+  - MOFSPickerManager
+  - PGDatePicker (~> 1.5.12)
   - SDAutoLayout (~> 2.1.3)
+  - SDCycleScrollView
   - SDWebImage (~> 4.0)
   - SVProgressHUD
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - BGFMDB
-    - IQKeyboardManager
-    - Masonry
-    - MBProgressHUD
-    - MJExtension
-    - MJRefresh
-    - SDAutoLayout
-    - SDWebImage
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MOFSPickerManager: 6efc539fec50b01cf525f429abe60dad05a87b1a
+  PGDatePicker: 13c548ab238219fb9cee546ac2030e1795bc386d
+  PGPickerView: 06e9c2bad1fb99dc35de6fbcbed2a6b42b227457
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: b84eb8522f537f6728127e54dcf1088db1faceab
+PODFILE CHECKSUM: f3410aa896a5a7f45772ce6f455cccea7e80aaf0
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.2.1

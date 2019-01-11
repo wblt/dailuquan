@@ -10,4 +10,8 @@ pod 'IQKeyboardManager'
 pod 'SVProgressHUD'
 pod 'SDAutoLayout', '~> 2.1.3'
 pod 'BGFMDB', '~> 2.0.9'
+pod 'PGDatePicker', '~> 1.5.12'
+pod 'MOFSPickerManager'
+pod 'GPUImage'
+pod 'SDCycleScrollView'
 end

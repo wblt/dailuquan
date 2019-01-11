@@ -46,6 +46,19 @@
 		3638545F2004C4EF00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3638545E2004C4EF00899B11 /* README.md */; };
 		363854612004C4FA00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 363854602004C4F900899B11 /* README.md */; };
 		92A34F38F4AC27A3C3ADFC02 /* libPods-iOSBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D497ADAEE224F0451F225E /* libPods-iOSBase.a */; };
+		EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112521E8DBF700D42C06 /* ScoreViewController.m */; };
+		EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112621E8DBF700D42C06 /* ScoreViewController.xib */; };
+		EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112A21E8DE0600D42C06 /* HonourViewController.m */; };
+		EE30112D21E8DE0600D42C06 /* HonourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112B21E8DE0600D42C06 /* HonourViewController.xib */; };
+		EE30113121E8E10F00D42C06 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112F21E8E10F00D42C06 /* AddressViewController.m */; };
+		EE30113221E8E10F00D42C06 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30113021E8E10F00D42C06 /* AddressViewController.xib */; };
+		EE30113621E8E50E00D42C06 /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30113421E8E50E00D42C06 /* AddressCell.m */; };
+		EE30113721E8E50E00D42C06 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30113521E8E50E00D42C06 /* AddressCell.xib */; };
+		EE30113A21E8E88900D42C06 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30113921E8E88900D42C06 /* InformationViewController.m */; };
+		EE30113C21E8ECC300D42C06 /* InformationHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30113B21E8ECC300D42C06 /* InformationHeaderView.xib */; };
+		EE30114521E8F5B400D42C06 /* TitleTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30114421E8F5B400D42C06 /* TitleTopScrollView.m */; };
+		EE30114921E8FB4800D42C06 /* GoodsColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30114621E8FB4700D42C06 /* GoodsColCell.xib */; };
+		EE30114A21E8FB4800D42C06 /* GoodsColCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30114821E8FB4800D42C06 /* GoodsColCell.m */; };
 		EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBCD21DE49B400E3DBA0 /* LoginViewController.m */; };
 		EE98FBD621DE49B400E3DBA0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBCF21DE49B400E3DBA0 /* RegisterViewController.m */; };
 		EE98FBD721DE49B400E3DBA0 /* ForgetPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98FBD021DE49B400E3DBA0 /* ForgetPwdController.m */; };
@@ -143,6 +156,26 @@
 		363854602004C4F900899B11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		363CBD582196F9CC00D616E6 /* FlowAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowAPI.h; sourceTree = "<group>"; };
 		6D47F575D57BBA9836E5F5A5 /* Pods-iOSBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase.release.xcconfig"; sourceTree = "<group>"; };
+		EE30112421E8DBF700D42C06 /* ScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		EE30112521E8DBF700D42C06 /* ScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		EE30112621E8DBF700D42C06 /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		EE30112921E8DE0600D42C06 /* HonourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HonourViewController.h; sourceTree = "<group>"; };
+		EE30112A21E8DE0600D42C06 /* HonourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HonourViewController.m; sourceTree = "<group>"; };
+		EE30112B21E8DE0600D42C06 /* HonourViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HonourViewController.xib; sourceTree = "<group>"; };
+		EE30112E21E8E10F00D42C06 /* AddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		EE30112F21E8E10F00D42C06 /* AddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		EE30113021E8E10F00D42C06 /* AddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		EE30113321E8E50E00D42C06 /* AddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
+		EE30113421E8E50E00D42C06 /* AddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
+		EE30113521E8E50E00D42C06 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		EE30113821E8E88900D42C06 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		EE30113921E8E88900D42C06 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		EE30113B21E8ECC300D42C06 /* InformationHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationHeaderView.xib; sourceTree = "<group>"; };
+		EE30114321E8F5B400D42C06 /* TitleTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTopScrollView.h; sourceTree = "<group>"; };
+		EE30114421E8F5B400D42C06 /* TitleTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTopScrollView.m; sourceTree = "<group>"; };
+		EE30114621E8FB4700D42C06 /* GoodsColCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsColCell.xib; sourceTree = "<group>"; };
+		EE30114721E8FB4800D42C06 /* GoodsColCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsColCell.h; sourceTree = "<group>"; };
+		EE30114821E8FB4800D42C06 /* GoodsColCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsColCell.m; sourceTree = "<group>"; };
 		EE98FBCD21DE49B400E3DBA0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EE98FBCE21DE49B400E3DBA0 /* ForgetPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdController.h; sourceTree = "<group>"; };
 		EE98FBCF21DE49B400E3DBA0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
@@ -460,6 +493,17 @@
 				EE98FBFB21DE529B00E3DBA0 /* MineViewController.h */,
 				EE98FBFC21DE529B00E3DBA0 /* MineViewController.m */,
 				EE98FBFD21DE529B00E3DBA0 /* MineViewController.xib */,
+				EE30112421E8DBF700D42C06 /* ScoreViewController.h */,
+				EE30112521E8DBF700D42C06 /* ScoreViewController.m */,
+				EE30112621E8DBF700D42C06 /* ScoreViewController.xib */,
+				EE30112921E8DE0600D42C06 /* HonourViewController.h */,
+				EE30112A21E8DE0600D42C06 /* HonourViewController.m */,
+				EE30112B21E8DE0600D42C06 /* HonourViewController.xib */,
+				EE30112E21E8E10F00D42C06 /* AddressViewController.h */,
+				EE30112F21E8E10F00D42C06 /* AddressViewController.m */,
+				EE30113021E8E10F00D42C06 /* AddressViewController.xib */,
+				EE30113821E8E88900D42C06 /* InformationViewController.h */,
+				EE30113921E8E88900D42C06 /* InformationViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +511,10 @@
 		EE98FBDF21DE501600E3DBA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE30113321E8E50E00D42C06 /* AddressCell.h */,
+				EE30113421E8E50E00D42C06 /* AddressCell.m */,
+				EE30113521E8E50E00D42C06 /* AddressCell.xib */,
+				EE30113B21E8ECC300D42C06 /* InformationHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -569,6 +617,11 @@
 		EE98FBEB21DE501600E3DBA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE30114321E8F5B400D42C06 /* TitleTopScrollView.h */,
+				EE30114421E8F5B400D42C06 /* TitleTopScrollView.m */,
+				EE30114721E8FB4800D42C06 /* GoodsColCell.h */,
+				EE30114821E8FB4800D42C06 /* GoodsColCell.m */,
+				EE30114621E8FB4700D42C06 /* GoodsColCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -585,6 +638,7 @@
 				363853A2200465BA00899B11 /* Frameworks */,
 				363853A3200465BA00899B11 /* Resources */,
 				0109F1B05E86862AFFE48F31 /* [CP] Copy Pods Resources */,
+				51571DC13AA3F2E8E2FC4BBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -681,13 +735,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE30113C21E8ECC300D42C06 /* InformationHeaderView.xib in Resources */,
 				363853E620046DFC00899B11 /* README.md in Resources */,
 				363853B5200465BA00899B11 /* LaunchScreen.storyboard in Resources */,
 				EE98FBD821DE49B400E3DBA0 /* Login.storyboard in Resources */,
 				3638545B2004C13200899B11 /* README.md in Resources */,
+				EE30114921E8FB4800D42C06 /* GoodsColCell.xib in Resources */,
 				3638545D2004C4BB00899B11 /* README.md in Resources */,
 				363853B2200465BA00899B11 /* Assets.xcassets in Resources */,
 				EE98FBF521DE512A00E3DBA0 /* YundongViewController.xib in Resources */,
+				EE30113221E8E10F00D42C06 /* AddressViewController.xib in Resources */,
 				363854502004C0A600899B11 /* close_icon@2x.png in Resources */,
 				363853E920046E0400899B11 /* README.md in Resources */,
 				EE98FBF021DE503100E3DBA0 /* QuanziViewController.xib in Resources */,
@@ -704,7 +761,10 @@
 				363853EC20046E0B00899B11 /* README.md in Resources */,
 				363854512004C0A600899B11 /* back_icon@3x.png in Resources */,
 				363854532004C0A600899B11 /* close_icon@3x.png in Resources */,
+				EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */,
 				3638545F2004C4EF00899B11 /* README.md in Resources */,
+				EE30112D21E8DE0600D42C06 /* HonourViewController.xib in Resources */,
+				EE30113721E8E50E00D42C06 /* AddressCell.xib in Resources */,
 				363853B0200465BA00899B11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,7 +805,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3CFCD5E7F97914AB75505F03 /* [CP] Check Pods Manifest.lock */ = {
@@ -763,7 +823,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51571DC13AA3F2E8E2FC4BBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -776,9 +851,12 @@
 				3638542C20049D8500899B11 /* BaseViewController.m in Sources */,
 				363854552004C0A600899B11 /* SureWebViewController.m in Sources */,
 				EE98FBFE21DE529B00E3DBA0 /* MineViewController.m in Sources */,
+				EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */,
 				363854192004981D00899B11 /* UIButton+XYButton.m in Sources */,
 				363854162004981D00899B11 /* SPUtil.m in Sources */,
+				EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */,
 				363854172004981D00899B11 /* GTMBase64.m in Sources */,
+				EE30113A21E8E88900D42C06 /* InformationViewController.m in Sources */,
 				EE98FBD721DE49B400E3DBA0 /* ForgetPwdController.m in Sources */,
 				3638541F2004981D00899B11 /* Util.m in Sources */,
 				363853B8200465BA00899B11 /* main.m in Sources */,
@@ -786,6 +864,7 @@
 				EE98FBEF21DE503100E3DBA0 /* QuanziViewController.m in Sources */,
 				EE98FBF921DE51DD00E3DBA0 /* JingpaiViewController.m in Sources */,
 				3638541B2004981D00899B11 /* UIColor+Extend.m in Sources */,
+				EE30113121E8E10F00D42C06 /* AddressViewController.m in Sources */,
 				EE98FBDB21DE4DFF00E3DBA0 /* TabbarViewController.m in Sources */,
 				3638541D2004981D00899B11 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				363854262004997200899B11 /* RequestParams.m in Sources */,
@@ -795,7 +874,10 @@
 				3638541C2004981D00899B11 /* UIView+Extend.m in Sources */,
 				EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */,
 				363853AA200465BA00899B11 /* AppDelegate.m in Sources */,
+				EE30114A21E8FB4800D42C06 /* GoodsColCell.m in Sources */,
 				3638541A2004981D00899B11 /* UICollectionView+IndexPath.m in Sources */,
+				EE30113621E8E50E00D42C06 /* AddressCell.m in Sources */,
+				EE30114521E8F5B400D42C06 /* TitleTopScrollView.m in Sources */,
 				363854182004981D00899B11 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

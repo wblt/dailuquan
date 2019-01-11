@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GoodsColCell">
+            <rect key="frame" x="0.0" y="0.0" width="147" height="186"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="147" height="186"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_background" translatesAutoresizingMaskIntoConstraints="NO" id="o2e-K7-mIP">
+                        <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="o2e-K7-mIP" secondAttribute="height" multiplier="1:1" id="563-0c-SKK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="魅族哈哈" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLr-AC-bSb">
+                        <rect key="frame" x="0.0" y="166.5" width="147" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="o2e-K7-mIP" secondAttribute="trailing" id="CnX-qy-2l2"/>
+                <constraint firstAttribute="trailing" secondItem="CLr-AC-bSb" secondAttribute="trailing" id="P2R-TP-P7U"/>
+                <constraint firstItem="CLr-AC-bSb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qou-Xi-XNj"/>
+                <constraint firstItem="o2e-K7-mIP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aXZ-ex-a5q"/>
+                <constraint firstItem="o2e-K7-mIP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ahU-M1-IjZ"/>
+                <constraint firstAttribute="bottom" secondItem="CLr-AC-bSb" secondAttribute="bottom" id="mBA-Jj-LGO"/>
+            </constraints>
+            <size key="customSize" width="147" height="186"/>
+            <connections>
+                <outlet property="imgView" destination="o2e-K7-mIP" id="MuM-st-gjD"/>
+                <outlet property="titleLab" destination="CLr-AC-bSb" id="4A6-Cf-ekf"/>
+            </connections>
+            <point key="canvasLocation" x="-6.5" y="107"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="me_background" width="360" height="240"/>
+    </resources>
+</document>

@@ -12,6 +12,12 @@
 #define k_app_userNumber @"app_userNumber"
 #define k_app_passNumber @"app_passNumber"
 #define k_app_rongCloud_token @"app_rongCloud_token"//融云Token
+#define k_app_headpath @"k_app_headpath"
+#define k_app_nickname @"k_app_nickname"
+#define k_app_sex @"k_app_sex"
+#define k_app_height @"k_app_height"
+#define k_app_weight @"k_app_weight"
+#define k_app_birthday @"k_app_birthday"
 @interface SPUtil : NSObject
 
 // 设置
