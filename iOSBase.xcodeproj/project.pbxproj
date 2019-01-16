@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36104EAF21EEC4AA00F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EAE21EEC4AA00F03AEB /* README.md */; };
+		36104EB121EEC4B700F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EB021EEC4B700F03AEB /* README.md */; };
+		36104EB421EEC4F200F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EB321EEC4F200F03AEB /* README.md */; };
+		36104EB721EEC55300F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EB621EEC55300F03AEB /* README.md */; };
+		36104EBC21EEC57900F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EB921EEC57900F03AEB /* README.md */; };
+		36104EBD21EEC57900F03AEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36104EBB21EEC57900F03AEB /* README.md */; };
 		363853AA200465BA00899B11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 363853A9200465BA00899B11 /* AppDelegate.m */; };
 		363853B0200465BA00899B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363853AE200465BA00899B11 /* Main.storyboard */; };
 		363853B2200465BA00899B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363853B1200465BA00899B11 /* Assets.xcassets */; };
@@ -93,6 +99,12 @@
 
 /* Begin PBXFileReference section */
 		02D497ADAEE224F0451F225E /* libPods-iOSBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36104EAE21EEC4AA00F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36104EB021EEC4B700F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36104EB321EEC4F200F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36104EB621EEC55300F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36104EB921EEC57900F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36104EBB21EEC57900F03AEB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		363853A5200465BA00899B11 /* iOSBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		363853A8200465BA00899B11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		363853A9200465BA00899B11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -232,6 +244,54 @@
 				02D497ADAEE224F0451F225E /* libPods-iOSBase.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36104EAC21EEC47300F03AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36104EB021EEC4B700F03AEB /* README.md */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36104EAD21EEC47F00F03AEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36104EAE21EEC4AA00F03AEB /* README.md */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36104EB221EEC4F200F03AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36104EB321EEC4F200F03AEB /* README.md */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36104EB521EEC55300F03AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36104EB621EEC55300F03AEB /* README.md */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36104EB821EEC57900F03AEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36104EB921EEC57900F03AEB /* README.md */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36104EBA21EEC57900F03AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36104EBB21EEC57900F03AEB /* README.md */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3638539C200465BA00899B11 = {
@@ -473,18 +533,11 @@
 		EE98FBDC21DE501600E3DBA0 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				EE98FBDD21DE501600E3DBA0 /* Models */,
+				36104EB221EEC4F200F03AEB /* Model */,
 				EE98FBDE21DE501600E3DBA0 /* Controllers */,
 				EE98FBDF21DE501600E3DBA0 /* Views */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		EE98FBDD21DE501600E3DBA0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EE98FBDE21DE501600E3DBA0 /* Controllers */ = {
@@ -522,18 +575,11 @@
 		EE98FBE021DE501600E3DBA0 /* Yundong */ = {
 			isa = PBXGroup;
 			children = (
-				EE98FBE121DE501600E3DBA0 /* Models */,
+				36104EBA21EEC57900F03AEB /* Model */,
+				36104EB821EEC57900F03AEB /* View */,
 				EE98FBE221DE501600E3DBA0 /* Controllers */,
-				EE98FBE321DE501600E3DBA0 /* Views */,
 			);
 			path = Yundong;
-			sourceTree = "<group>";
-		};
-		EE98FBE121DE501600E3DBA0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EE98FBE221DE501600E3DBA0 /* Controllers */ = {
@@ -546,28 +592,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		EE98FBE321DE501600E3DBA0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		EE98FBE421DE501600E3DBA0 /* Jingpai */ = {
 			isa = PBXGroup;
 			children = (
-				EE98FBE521DE501600E3DBA0 /* Models */,
+				36104EAD21EEC47F00F03AEB /* Views */,
+				36104EAC21EEC47300F03AEB /* Model */,
 				EE98FBE621DE501600E3DBA0 /* Controllers */,
-				EE98FBE721DE501600E3DBA0 /* Views */,
 			);
 			path = Jingpai;
-			sourceTree = "<group>";
-		};
-		EE98FBE521DE501600E3DBA0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EE98FBE621DE501600E3DBA0 /* Controllers */ = {
@@ -580,28 +612,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		EE98FBE721DE501600E3DBA0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		EE98FBE821DE501600E3DBA0 /* Quanzi */ = {
 			isa = PBXGroup;
 			children = (
-				EE98FBE921DE501600E3DBA0 /* Models */,
+				36104EB521EEC55300F03AEB /* Model */,
 				EE98FBEA21DE501600E3DBA0 /* Controllers */,
 				EE98FBEB21DE501600E3DBA0 /* Views */,
 			);
 			path = Quanzi;
-			sourceTree = "<group>";
-		};
-		EE98FBE921DE501600E3DBA0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EE98FBEA21DE501600E3DBA0 /* Controllers */ = {
@@ -741,9 +759,11 @@
 				EE98FBD821DE49B400E3DBA0 /* Login.storyboard in Resources */,
 				3638545B2004C13200899B11 /* README.md in Resources */,
 				EE30114921E8FB4800D42C06 /* GoodsColCell.xib in Resources */,
+				36104EBC21EEC57900F03AEB /* README.md in Resources */,
 				3638545D2004C4BB00899B11 /* README.md in Resources */,
 				363853B2200465BA00899B11 /* Assets.xcassets in Resources */,
 				EE98FBF521DE512A00E3DBA0 /* YundongViewController.xib in Resources */,
+				36104EB121EEC4B700F03AEB /* README.md in Resources */,
 				EE30113221E8E10F00D42C06 /* AddressViewController.xib in Resources */,
 				363854502004C0A600899B11 /* close_icon@2x.png in Resources */,
 				363853E920046E0400899B11 /* README.md in Resources */,
@@ -751,16 +771,20 @@
 				EE98FBFF21DE529B00E3DBA0 /* MineViewController.xib in Resources */,
 				363854612004C4FA00899B11 /* README.md in Resources */,
 				EE98FBFA21DE51DD00E3DBA0 /* JingpaiViewController.xib in Resources */,
+				36104EB721EEC55300F03AEB /* README.md in Resources */,
 				363854572004C0C200899B11 /* README.md in Resources */,
 				363853E320046DF500899B11 /* README.md in Resources */,
 				363854522004C0A600899B11 /* sure_placeholder_error@3x.png in Resources */,
 				363853E020046DDC00899B11 /* README.md in Resources */,
 				363853F12004706800899B11 /* README.md in Resources */,
 				363854542004C0A600899B11 /* back_icon@2x.png in Resources */,
+				36104EAF21EEC4AA00F03AEB /* README.md in Resources */,
 				3638544F2004C0A600899B11 /* sure_placeholder_error@2x.png in Resources */,
 				363853EC20046E0B00899B11 /* README.md in Resources */,
 				363854512004C0A600899B11 /* back_icon@3x.png in Resources */,
+				36104EBD21EEC57900F03AEB /* README.md in Resources */,
 				363854532004C0A600899B11 /* close_icon@3x.png in Resources */,
+				36104EB421EEC4F200F03AEB /* README.md in Resources */,
 				EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */,
 				3638545F2004C4EF00899B11 /* README.md in Resources */,
 				EE30112D21E8DE0600D42C06 /* HonourViewController.xib in Resources */,
