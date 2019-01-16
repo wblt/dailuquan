@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>带路圈</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -38,16 +40,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    <key>NSCameraUsageDescription</key>
-    <string>带路圈正在尝试打开你的相机用于修改头像，请问是否允许访问？</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>带路圈正在尝试打开你的麦克风用于保存照片，请问是否允许访问？</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>带路圈正在尝试打开你的相册用于修改头像，请问是否允许访问？</string>
+	<key>NSCameraUsageDescription</key>
+	<string>带路圈正在尝试打开你的相机用于修改头像，请问是否允许访问？</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>带路圈正在尝试打开你的麦克风用于保存照片，请问是否允许访问？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>带路圈正在尝试打开你的相册用于修改头像，请问是否允许访问？</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -65,5 +65,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
