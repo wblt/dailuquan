@@ -17,8 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"运动";
+    UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(moreAction)];
+    self.navigationItem.leftBarButtonItem = leftBarItem;
+    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shareAction)];
+    self.navigationItem.rightBarButtonItem = rigthBarItem;
 }
 
+- (void)moreAction {
+    
+}
+
+- (void)shareAction {
+    
+}
 /*
 #pragma mark - Navigation
 

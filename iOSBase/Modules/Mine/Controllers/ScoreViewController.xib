@@ -37,13 +37,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您当前拥有余额：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA2-FP-460">
+                    <rect key="frame" x="98" y="203" width="179" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-HZ-PPi">
+                    <rect key="frame" x="171" y="250" width="33" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="wA2-FP-460" firstAttribute="top" secondItem="wWw-Rg-ay9" secondAttribute="bottom" constant="30" id="Eyy-sA-HnW"/>
                 <constraint firstItem="wWw-Rg-ay9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KY3-Ib-Mvl"/>
                 <constraint firstAttribute="bottom" secondItem="f9D-51-ECn" secondAttribute="bottom" constant="100" id="Nw8-0E-H6M"/>
                 <constraint firstItem="wVA-P6-fUA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PTr-OQ-IhQ"/>
+                <constraint firstItem="wA2-FP-460" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yl3-3m-Hl9"/>
                 <constraint firstItem="wWw-Rg-ay9" firstAttribute="top" secondItem="wVA-P6-fUA" secondAttribute="bottom" constant="20" id="day-2s-Kxh"/>
+                <constraint firstItem="jhI-HZ-PPi" firstAttribute="top" secondItem="wA2-FP-460" secondAttribute="bottom" constant="20" id="nMK-1z-N5M"/>
+                <constraint firstItem="jhI-HZ-PPi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pYI-sR-YyS"/>
                 <constraint firstItem="wVA-P6-fUA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="uON-8H-FeY"/>
                 <constraint firstItem="f9D-51-ECn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xDY-JB-5HQ"/>
             </constraints>
