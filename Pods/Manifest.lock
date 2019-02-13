@@ -20,6 +20,7 @@ PODS:
   - BGFMDB/BG (2.0.13):
     - BGFMDB/FMDB
   - BGFMDB/FMDB (2.0.13)
+  - BRPickerView (2.2.1)
   - GPUImage (0.1.7)
   - IQKeyboardManager (5.0.7)
   - Masonry (1.1.0)
@@ -41,6 +42,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - BGFMDB (~> 2.0.9)
+  - BRPickerView
   - GPUImage
   - IQKeyboardManager
   - Masonry
@@ -57,6 +59,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
+  BRPickerView: 0590a8c5de9bd98c6b4e4f117a3dff6de287d5b2
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -71,6 +74,6 @@ SPEC CHECKSUMS:
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: f3410aa896a5a7f45772ce6f455cccea7e80aaf0
+PODFILE CHECKSUM: 4d99254809f6bc276deffbe138ed4e4f408029bc
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

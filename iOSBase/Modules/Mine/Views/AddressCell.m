@@ -10,9 +10,14 @@
 
 @implementation AddressCell
 
+
+- (IBAction)editAction:(id)sender {
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    ViewRadius(self.titleLab, 20);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -9,6 +9,20 @@
 #ifndef FlowAPI_h
 #define FlowAPI_h
 
+//View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
 /**<转换16进制颜色*/
 #define UIColorFromHex(HexValue) ([UIColor colorWithHex:HexValue])
 

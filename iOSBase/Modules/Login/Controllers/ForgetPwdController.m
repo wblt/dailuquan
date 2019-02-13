@@ -23,6 +23,10 @@
     self.title = @"密码找回";
      [_phoneNum addTarget:self action:@selector(textFieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
 }
+- (IBAction)visAction:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    _passwordFiled.secureTextEntry = !sender.selected;
+}
 
 // textField 长度限制
 - (void)textFieldDidChanged:(UITextField *)textField

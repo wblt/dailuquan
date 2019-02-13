@@ -14,4 +14,7 @@ pod 'PGDatePicker', '~> 1.5.12'
 pod 'MOFSPickerManager'
 pod 'GPUImage'
 pod 'SDCycleScrollView'
+
+pod 'BRPickerView'
+
 end

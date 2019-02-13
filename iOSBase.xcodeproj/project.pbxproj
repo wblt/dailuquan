@@ -52,6 +52,16 @@
 		3638545F2004C4EF00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3638545E2004C4EF00899B11 /* README.md */; };
 		363854612004C4FA00899B11 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 363854602004C4F900899B11 /* README.md */; };
 		92A34F38F4AC27A3C3ADFC02 /* libPods-iOSBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D497ADAEE224F0451F225E /* libPods-iOSBase.a */; };
+		CF45B7822214347700DA69CD /* MyDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7802214347700DA69CD /* MyDeviceVC.m */; };
+		CF45B7832214347700DA69CD /* MyDeviceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B7812214347700DA69CD /* MyDeviceVC.xib */; };
+		CF45B7872214360300DA69CD /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7852214360300DA69CD /* DeviceTableViewCell.m */; };
+		CF45B7882214360300DA69CD /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B7862214360300DA69CD /* DeviceTableViewCell.xib */; };
+		CF45B78C221438ED00DA69CD /* AddDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B78A221438ED00DA69CD /* AddDeviceVC.m */; };
+		CF45B78D221438ED00DA69CD /* AddDeviceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B78B221438ED00DA69CD /* AddDeviceVC.xib */; };
+		CF45B79022143EDD00DA69CD /* DevicesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B78F22143EDD00DA69CD /* DevicesModel.m */; };
+		CF45B794221440BE00DA69CD /* AddAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B792221440BE00DA69CD /* AddAddressVC.m */; };
+		CF45B795221440BE00DA69CD /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B793221440BE00DA69CD /* AddAddressVC.xib */; };
+		CF45B7982214533800DA69CD /* AddressInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7972214533800DA69CD /* AddressInfoModel.m */; };
 		EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112521E8DBF700D42C06 /* ScoreViewController.m */; };
 		EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112621E8DBF700D42C06 /* ScoreViewController.xib */; };
 		EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112A21E8DE0600D42C06 /* HonourViewController.m */; };
@@ -168,6 +178,22 @@
 		363854602004C4F900899B11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		363CBD582196F9CC00D616E6 /* FlowAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowAPI.h; sourceTree = "<group>"; };
 		6D47F575D57BBA9836E5F5A5 /* Pods-iOSBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBase/Pods-iOSBase.release.xcconfig"; sourceTree = "<group>"; };
+		CF45B77F2214347700DA69CD /* MyDeviceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeviceVC.h; sourceTree = "<group>"; };
+		CF45B7802214347700DA69CD /* MyDeviceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeviceVC.m; sourceTree = "<group>"; };
+		CF45B7812214347700DA69CD /* MyDeviceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDeviceVC.xib; sourceTree = "<group>"; };
+		CF45B7842214360300DA69CD /* DeviceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewCell.h; sourceTree = "<group>"; };
+		CF45B7852214360300DA69CD /* DeviceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
+		CF45B7862214360300DA69CD /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		CF45B789221438ED00DA69CD /* AddDeviceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDeviceVC.h; sourceTree = "<group>"; };
+		CF45B78A221438ED00DA69CD /* AddDeviceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDeviceVC.m; sourceTree = "<group>"; };
+		CF45B78B221438ED00DA69CD /* AddDeviceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceVC.xib; sourceTree = "<group>"; };
+		CF45B78E22143EDD00DA69CD /* DevicesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevicesModel.h; sourceTree = "<group>"; };
+		CF45B78F22143EDD00DA69CD /* DevicesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevicesModel.m; sourceTree = "<group>"; };
+		CF45B791221440BE00DA69CD /* AddAddressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAddressVC.h; sourceTree = "<group>"; };
+		CF45B792221440BE00DA69CD /* AddAddressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAddressVC.m; sourceTree = "<group>"; };
+		CF45B793221440BE00DA69CD /* AddAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAddressVC.xib; sourceTree = "<group>"; };
+		CF45B7962214533800DA69CD /* AddressInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressInfoModel.h; sourceTree = "<group>"; };
+		CF45B7972214533800DA69CD /* AddressInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressInfoModel.m; sourceTree = "<group>"; };
 		EE30112421E8DBF700D42C06 /* ScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		EE30112521E8DBF700D42C06 /* ScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		EE30112621E8DBF700D42C06 /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
@@ -266,6 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				36104EB321EEC4F200F03AEB /* README.md */,
+				CF45B78E22143EDD00DA69CD /* DevicesModel.h */,
+				CF45B78F22143EDD00DA69CD /* DevicesModel.m */,
+				CF45B7962214533800DA69CD /* AddressInfoModel.h */,
+				CF45B7972214533800DA69CD /* AddressInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,6 +576,12 @@
 				EE98FBFB21DE529B00E3DBA0 /* MineViewController.h */,
 				EE98FBFC21DE529B00E3DBA0 /* MineViewController.m */,
 				EE98FBFD21DE529B00E3DBA0 /* MineViewController.xib */,
+				CF45B77F2214347700DA69CD /* MyDeviceVC.h */,
+				CF45B7802214347700DA69CD /* MyDeviceVC.m */,
+				CF45B7812214347700DA69CD /* MyDeviceVC.xib */,
+				CF45B789221438ED00DA69CD /* AddDeviceVC.h */,
+				CF45B78A221438ED00DA69CD /* AddDeviceVC.m */,
+				CF45B78B221438ED00DA69CD /* AddDeviceVC.xib */,
 				EE30112421E8DBF700D42C06 /* ScoreViewController.h */,
 				EE30112521E8DBF700D42C06 /* ScoreViewController.m */,
 				EE30112621E8DBF700D42C06 /* ScoreViewController.xib */,
@@ -555,6 +591,9 @@
 				EE30112E21E8E10F00D42C06 /* AddressViewController.h */,
 				EE30112F21E8E10F00D42C06 /* AddressViewController.m */,
 				EE30113021E8E10F00D42C06 /* AddressViewController.xib */,
+				CF45B791221440BE00DA69CD /* AddAddressVC.h */,
+				CF45B792221440BE00DA69CD /* AddAddressVC.m */,
+				CF45B793221440BE00DA69CD /* AddAddressVC.xib */,
 				EE30113821E8E88900D42C06 /* InformationViewController.h */,
 				EE30113921E8E88900D42C06 /* InformationViewController.m */,
 			);
@@ -567,6 +606,9 @@
 				EE30113321E8E50E00D42C06 /* AddressCell.h */,
 				EE30113421E8E50E00D42C06 /* AddressCell.m */,
 				EE30113521E8E50E00D42C06 /* AddressCell.xib */,
+				CF45B7842214360300DA69CD /* DeviceTableViewCell.h */,
+				CF45B7852214360300DA69CD /* DeviceTableViewCell.m */,
+				CF45B7862214360300DA69CD /* DeviceTableViewCell.xib */,
 				EE30113B21E8ECC300D42C06 /* InformationHeaderView.xib */,
 			);
 			path = Views;
@@ -753,6 +795,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF45B7832214347700DA69CD /* MyDeviceVC.xib in Resources */,
+				CF45B7882214360300DA69CD /* DeviceTableViewCell.xib in Resources */,
 				EE30113C21E8ECC300D42C06 /* InformationHeaderView.xib in Resources */,
 				363853E620046DFC00899B11 /* README.md in Resources */,
 				363853B5200465BA00899B11 /* LaunchScreen.storyboard in Resources */,
@@ -777,6 +821,7 @@
 				363854522004C0A600899B11 /* sure_placeholder_error@3x.png in Resources */,
 				363853E020046DDC00899B11 /* README.md in Resources */,
 				363853F12004706800899B11 /* README.md in Resources */,
+				CF45B795221440BE00DA69CD /* AddAddressVC.xib in Resources */,
 				363854542004C0A600899B11 /* back_icon@2x.png in Resources */,
 				36104EAF21EEC4AA00F03AEB /* README.md in Resources */,
 				3638544F2004C0A600899B11 /* sure_placeholder_error@2x.png in Resources */,
@@ -785,6 +830,7 @@
 				36104EBD21EEC57900F03AEB /* README.md in Resources */,
 				363854532004C0A600899B11 /* close_icon@3x.png in Resources */,
 				36104EB421EEC4F200F03AEB /* README.md in Resources */,
+				CF45B78D221438ED00DA69CD /* AddDeviceVC.xib in Resources */,
 				EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */,
 				3638545F2004C4EF00899B11 /* README.md in Resources */,
 				EE30112D21E8DE0600D42C06 /* HonourViewController.xib in Resources */,
@@ -847,7 +893,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		51571DC13AA3F2E8E2FC4BBC /* [CP] Embed Pods Frameworks */ = {
@@ -872,6 +918,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF45B79022143EDD00DA69CD /* DevicesModel.m in Sources */,
 				3638542C20049D8500899B11 /* BaseViewController.m in Sources */,
 				363854552004C0A600899B11 /* SureWebViewController.m in Sources */,
 				EE98FBFE21DE529B00E3DBA0 /* MineViewController.m in Sources */,
@@ -883,6 +930,7 @@
 				EE30113A21E8E88900D42C06 /* InformationViewController.m in Sources */,
 				EE98FBD721DE49B400E3DBA0 /* ForgetPwdController.m in Sources */,
 				3638541F2004981D00899B11 /* Util.m in Sources */,
+				CF45B7872214360300DA69CD /* DeviceTableViewCell.m in Sources */,
 				363853B8200465BA00899B11 /* main.m in Sources */,
 				EE98FBD621DE49B400E3DBA0 /* RegisterViewController.m in Sources */,
 				EE98FBEF21DE503100E3DBA0 /* QuanziViewController.m in Sources */,
@@ -894,7 +942,10 @@
 				363854262004997200899B11 /* RequestParams.m in Sources */,
 				3638542B20049D8500899B11 /* BaseNavViewController.m in Sources */,
 				363854252004997200899B11 /* NetworkSingleton.m in Sources */,
+				CF45B7822214347700DA69CD /* MyDeviceVC.m in Sources */,
+				CF45B794221440BE00DA69CD /* AddAddressVC.m in Sources */,
 				EE98FBF421DE512A00E3DBA0 /* YundongViewController.m in Sources */,
+				CF45B7982214533800DA69CD /* AddressInfoModel.m in Sources */,
 				3638541C2004981D00899B11 /* UIView+Extend.m in Sources */,
 				EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */,
 				363853AA200465BA00899B11 /* AppDelegate.m in Sources */,
@@ -902,6 +953,7 @@
 				3638541A2004981D00899B11 /* UICollectionView+IndexPath.m in Sources */,
 				EE30113621E8E50E00D42C06 /* AddressCell.m in Sources */,
 				EE30114521E8F5B400D42C06 /* TitleTopScrollView.m in Sources */,
+				CF45B78C221438ED00DA69CD /* AddDeviceVC.m in Sources */,
 				363854182004981D00899B11 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,8 @@
 #import "HonourViewController.h"
 #import "AddressViewController.h"
 #import "InformationViewController.h"
+#import "MyDeviceVC.h"
+
 @interface MineViewController ()
 @property (weak, nonatomic) IBOutlet UIView *user_view;
 @property (weak, nonatomic) IBOutlet UIView *visit_view;
@@ -24,6 +26,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loginAction)];
+    [_visit_view addGestureRecognizer:tap];
+    
+    
 }
 
 - (void)registerAction {
@@ -89,6 +97,14 @@
     if ([SPUtil boolForKey:k_app_login]) {
         AddressViewController *address = [[AddressViewController alloc] init];
         [self.navigationController pushViewController:address animated:YES];
+    }else {
+        [self loginAction];
+    }
+}
+- (IBAction)bindDeviceAction:(id)sender {
+    if ([SPUtil boolForKey:k_app_login]) {
+        MyDeviceVC *vc = [[MyDeviceVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else {
         [self loginAction];
     }
