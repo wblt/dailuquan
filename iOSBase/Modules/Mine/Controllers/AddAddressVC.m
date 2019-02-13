@@ -34,6 +34,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"添加地址";
+    
+    if (self.addressModel) {
+        _name = self.addressModel.name;
+        _phone = self.addressModel.phone;
+        _sheng = self.addressModel.province;
+        _shi = self.addressModel.city;
+        _qu = self.addressModel.area;
+        _address = self.addressModel.address;
+        
+        _nameLab.text = _name;
+        _phoneLab.text = _phoneLab;
+        _pLab.text = _sheng;
+        _cityLab.text = _shi;
+        _disLab.text = _qu;
+        _addressLab.text = _address;
+        
+    }
+    
+    
     UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(addAddressAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
 }
@@ -59,7 +78,11 @@
         return;
     }
     
-    // 绑定设备
+    if (self.addressModel) {
+        // 修改
+    }else {
+        // 新增
+    }
 }
 
 - (IBAction)nameAction:(id)sender {

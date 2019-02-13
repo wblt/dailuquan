@@ -60,7 +60,8 @@
 #define SERVER_IP         @"http://yg.welcare-tech.com.cn"
 
 // 登录
-#define api_login       SERVER_IP@"/tpiot/app/login"
+//#define api_login       SERVER_IP@"/tpiot/app/login"
+#define api_login       SERVER_IP@"/weixin/agedgame/login"
 
 // 获取验证码
 #define api_vercode     SERVER_IP@"/tpiot/app/vercode"
@@ -76,5 +77,19 @@
 
 // 更新用户信息
 #define api_upuserinfodata     SERVER_IP@"/tpiot/app/upuserinfodata"
+
+//--------------
+//我的设备
+#define api_getDevices     SERVER_IP@"/weixin/agedgame/getDevices"
+
+// 收货地址
+#define api_getReceivingAddress     SERVER_IP@"/weixin/agedgame/getReceivingAddress"
+
+// 积分
+#define api_getIntegral     SERVER_IP@"/weixin/agedgame/getIntegral"
+
+// 荣誉
+#define api_getMotionHonor     SERVER_IP@"/weixin/agedgame/getMotionHonor"
+
 
 #endif /* FlowAPI_h */

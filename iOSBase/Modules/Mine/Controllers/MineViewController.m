@@ -19,6 +19,8 @@
 @interface MineViewController ()
 @property (weak, nonatomic) IBOutlet UIView *user_view;
 @property (weak, nonatomic) IBOutlet UIView *visit_view;
+@property (weak, nonatomic) IBOutlet UIImageView *headImgView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
 
 @end
 
@@ -60,6 +62,10 @@
 
 - (void)changeLoginStatus {
     if ([SPUtil boolForKey:k_app_login]) {
+        UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+        [self.headImgView sd_setImageWithURL:[NSURL URLWithString:userModel.portrait] placeholderImage:[UIImage imageNamed:@"me_head_portrait"]];
+        self.nameLab.text = userModel.nikeName;
+        
         self.user_view.hidden = NO;
         self.visit_view.hidden = YES;
         UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(exitAction)];

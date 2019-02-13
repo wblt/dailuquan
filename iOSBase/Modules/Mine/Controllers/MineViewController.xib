@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineViewController">
             <connections>
+                <outlet property="headImgView" destination="hrP-GJ-Tzy" id="QP3-zb-eDm"/>
+                <outlet property="nameLab" destination="Jnt-7L-vl9" id="xXi-R5-ro1"/>
                 <outlet property="user_view" destination="Mlp-7l-n93" id="fbv-1p-P7T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="visit_view" destination="V6g-va-fcn" id="zen-Os-d1B"/>

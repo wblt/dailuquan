@@ -30,6 +30,32 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeviceTableViewCell"];
     UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addDeviceAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
+    
+    [self requestData];
+}
+
+- (void)requestData {
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:api_getDevices];
+    [params addParameter:@"uid" value:userModel.id];
+    
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        for (NSDictionary *dic in data[@"data"][@"devices"]) {
+            DevicesModel *model = [DevicesModel mj_objectWithKeyValues:dic];
+            [self.dataSource addObject:model];
+        }
+        
+        [self.tableView reloadData];
+        
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
+    
 }
 
 - (void)addDeviceAction {
@@ -38,17 +64,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;//self.addressArr.count;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.model = self.dataSource[indexPath.row];
     MJWeakSelf
     cell.block = ^(DevicesModel *model) {
-        //
-        [weakSelf.dataSource removeObject:model];
-        [weakSelf.tableView reloadData];
+        [self AlertWithTitle:@"温馨提示" message:@"是否接触次设备的绑定" andOthers:@[@"取消",@"确定"] animated:YES action:^(NSInteger index) {
+            
+            if (index == 1) {
+                [weakSelf.dataSource removeObject:model];
+                [weakSelf.tableView reloadData];
+            }
+        }];
+        
     };
     return cell;
 }

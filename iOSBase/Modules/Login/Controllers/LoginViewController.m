@@ -55,8 +55,6 @@
 
 #pragma mark - 登陆
 - (IBAction)loginAction:(id)sender {
-    [SPUtil setBool:YES forKey:k_app_login];
-    [self.navigationController popToRootViewControllerAnimated:YES];
     if (self.phoneNumFiled.text.length != 11) {
         [SVProgressHUD showInfoWithStatus:@"请输入正确的手机号码"];
         return;
@@ -67,25 +65,19 @@
     }
     RequestParams *parms = [[RequestParams alloc] initWithParams:api_login];
     NSString *md5 = [[self.passwordFiled.text MD5Hash] lowercaseString];
-    [parms addParameter:@"username" value:self.phoneNumFiled.text];
+    [parms addParameter:@"accountNumber" value:self.phoneNumFiled.text];
+    [parms addParameter:@"loginType" value:@"0"];
     [parms addParameter:@"password" value:md5];
     [[NetworkSingleton shareInstace] httpPost:parms withTitle:@"登录" successBlock:^(id data) {
         NSDictionary *dic = data;
         NSString *code = dic[@"code"];
         if ([code isEqualToString:@"0"]) {
             [SVProgressHUD showInfoWithStatus:@"登录成功"];
-//            [SPUtil setObject:self.phoneNumFiled.text forKey:k_app_username];
-//            [SPUtil setObject:self.passwordFiled.text forKey:k_app_password];
-//            [SPUtil setObject:dic[@"userid"] forKey:k_app_uid];
-//            [SPUtil setBool:YES forKey:k_app_login];
-//            HomeViewController *homevc = [[HomeViewController alloc] init];
-//            LeftViewController *left = [[LeftViewController alloc] init];
-//            BaseNavViewController *homeNav = [[BaseNavViewController alloc] initWithRootViewController:homevc];
-//            BaseNavViewController *leftNav = [[BaseNavViewController alloc] initWithRootViewController:left];
-//            LeftSlideViewController *slidvc = [[LeftSlideViewController alloc] initWithLeftView:leftNav andMainView:homeNav];
-//            AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//            tempAppDelegate.leftSlideVC = slidvc;
-//            tempAppDelegate.window.rootViewController = slidvc;
+            [SPUtil setObject:self.phoneNumFiled.text forKey:k_app_userNumber];
+            UserInfoModel *model = [UserInfoModel mj_objectWithKeyValues:data[@"data"]];
+            [[BeanManager shareInstace] setBean:model path:UserModelPath];
+            [SPUtil setBool:YES forKey:k_app_login];
+            [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
             [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"登录失败-%@",dic[@"message"]]];
         }

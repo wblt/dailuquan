@@ -31,6 +31,9 @@
 #import "GTMBase64.h"
 #import "NSString+MD5.h"
 
+#import "UserInfoModel.h"
+#import "BeanManager.h"
+
 //第三方
 #import <MBProgressHUD.h>
 #import <Masonry.h>

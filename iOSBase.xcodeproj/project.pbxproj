@@ -62,6 +62,9 @@
 		CF45B794221440BE00DA69CD /* AddAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B792221440BE00DA69CD /* AddAddressVC.m */; };
 		CF45B795221440BE00DA69CD /* AddAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B793221440BE00DA69CD /* AddAddressVC.xib */; };
 		CF45B7982214533800DA69CD /* AddressInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7972214533800DA69CD /* AddressInfoModel.m */; };
+		CF45B79E22145A5400DA69CD /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B79B22145A5400DA69CD /* UserInfoModel.m */; };
+		CF45B79F22145A5400DA69CD /* BeanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B79C22145A5400DA69CD /* BeanManager.m */; };
+		CF45B7A22214656600DA69CD /* HonorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7A12214656600DA69CD /* HonorModel.m */; };
 		EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112521E8DBF700D42C06 /* ScoreViewController.m */; };
 		EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112621E8DBF700D42C06 /* ScoreViewController.xib */; };
 		EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112A21E8DE0600D42C06 /* HonourViewController.m */; };
@@ -194,6 +197,12 @@
 		CF45B793221440BE00DA69CD /* AddAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAddressVC.xib; sourceTree = "<group>"; };
 		CF45B7962214533800DA69CD /* AddressInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressInfoModel.h; sourceTree = "<group>"; };
 		CF45B7972214533800DA69CD /* AddressInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressInfoModel.m; sourceTree = "<group>"; };
+		CF45B79A22145A5400DA69CD /* BeanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeanManager.h; sourceTree = "<group>"; };
+		CF45B79B22145A5400DA69CD /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		CF45B79C22145A5400DA69CD /* BeanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeanManager.m; sourceTree = "<group>"; };
+		CF45B79D22145A5400DA69CD /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		CF45B7A02214656600DA69CD /* HonorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HonorModel.h; sourceTree = "<group>"; };
+		CF45B7A12214656600DA69CD /* HonorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HonorModel.m; sourceTree = "<group>"; };
 		EE30112421E8DBF700D42C06 /* ScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		EE30112521E8DBF700D42C06 /* ScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		EE30112621E8DBF700D42C06 /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
@@ -296,6 +305,8 @@
 				CF45B78F22143EDD00DA69CD /* DevicesModel.m */,
 				CF45B7962214533800DA69CD /* AddressInfoModel.h */,
 				CF45B7972214533800DA69CD /* AddressInfoModel.m */,
+				CF45B7A02214656600DA69CD /* HonorModel.h */,
+				CF45B7A12214656600DA69CD /* HonorModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				363853DF20046DDC00899B11 /* README.md */,
+				CF45B79922145A5400DA69CD /* BeanManager */,
 				363854462004C07800899B11 /* SureWebViewController */,
 				363854022004981D00899B11 /* Category */,
 				363853FC2004981D00899B11 /* Encrypt */,
@@ -528,6 +540,17 @@
 				6D47F575D57BBA9836E5F5A5 /* Pods-iOSBase.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF45B79922145A5400DA69CD /* BeanManager */ = {
+			isa = PBXGroup;
+			children = (
+				CF45B79A22145A5400DA69CD /* BeanManager.h */,
+				CF45B79C22145A5400DA69CD /* BeanManager.m */,
+				CF45B79D22145A5400DA69CD /* UserInfoModel.h */,
+				CF45B79B22145A5400DA69CD /* UserInfoModel.m */,
+			);
+			path = BeanManager;
 			sourceTree = "<group>";
 		};
 		EE98FBCB21DE49B400E3DBA0 /* Login */ = {
@@ -936,9 +959,11 @@
 				EE98FBEF21DE503100E3DBA0 /* QuanziViewController.m in Sources */,
 				EE98FBF921DE51DD00E3DBA0 /* JingpaiViewController.m in Sources */,
 				3638541B2004981D00899B11 /* UIColor+Extend.m in Sources */,
+				CF45B79F22145A5400DA69CD /* BeanManager.m in Sources */,
 				EE30113121E8E10F00D42C06 /* AddressViewController.m in Sources */,
 				EE98FBDB21DE4DFF00E3DBA0 /* TabbarViewController.m in Sources */,
 				3638541D2004981D00899B11 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
+				CF45B7A22214656600DA69CD /* HonorModel.m in Sources */,
 				363854262004997200899B11 /* RequestParams.m in Sources */,
 				3638542B20049D8500899B11 /* BaseNavViewController.m in Sources */,
 				363854252004997200899B11 /* NetworkSingleton.m in Sources */,
@@ -948,6 +973,7 @@
 				CF45B7982214533800DA69CD /* AddressInfoModel.m in Sources */,
 				3638541C2004981D00899B11 /* UIView+Extend.m in Sources */,
 				EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */,
+				CF45B79E22145A5400DA69CD /* UserInfoModel.m in Sources */,
 				363853AA200465BA00899B11 /* AppDelegate.m in Sources */,
 				EE30114A21E8FB4800D42C06 /* GoodsColCell.m in Sources */,
 				3638541A2004981D00899B11 /* UICollectionView+IndexPath.m in Sources */,

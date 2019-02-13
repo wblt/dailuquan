@@ -18,7 +18,8 @@
 
 - (void)setModel:(DevicesModel *)model {
     _model = model;
-    
+    self.titleLab.text = [NSString stringWithFormat:@"%@ %@",model.nikName,model.deviceType];
+    self.deviceLab.text = model.deviceid;
 }
 
 - (void)awakeFromNib {

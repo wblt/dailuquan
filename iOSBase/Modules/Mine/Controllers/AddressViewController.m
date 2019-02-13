@@ -23,11 +23,36 @@
     self.addressArr = [NSMutableArray array];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 60;
+    self.tableView.rowHeight = 76;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView registerNib:[UINib nibWithNibName:@"AddressCell" bundle:nil] forCellReuseIdentifier:@"AddressCell"];
     UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addAddressAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
+    
+    [self requestData];
+}
+
+- (void)requestData {
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:api_getReceivingAddress];
+    [params addParameter:@"uid" value:userModel.id];
+    
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        for (NSDictionary *dic in data[@"data"]) {
+            AddressInfoModel *model = [AddressInfoModel mj_objectWithKeyValues:dic];
+            [self.addressArr addObject:model];
+        }
+        
+        [self.tableView reloadData];
+        
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
 }
 
 - (void)addAddressAction {
@@ -40,12 +65,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;//self.addressArr.count;
+    return self.addressArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AddressCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell" forIndexPath:indexPath];
+    cell.model = self.addressArr[indexPath.row];
+    
+    MJWeakSelf
+    cell.block = ^(AddressInfoModel * _Nonnull model) {
+        [self AlertWithTitle:@"温馨提示" message:@"删除或修改收货地址" andOthers:@[@"删除",@"修改"] animated:YES action:^(NSInteger index) {
+            if (index == 0) { // 删除
+                [weakSelf.addressArr removeObject:model];
+                [weakSelf.tableView reloadData];
+            }else { // 修改
+                AddAddressVC *vc = [[AddAddressVC alloc] init];
+                vc.addressModel = model;
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            }
+        }];
+    };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
