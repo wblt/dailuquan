@@ -12,7 +12,6 @@
 #import "AppDelegate.h"
 #import "BaseNavViewController.h"
 #import "TabbarViewController.h"
-//#import "InformationViewController.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *registBtn;
@@ -101,6 +100,4 @@
         };
     }
 }
-
-
 @end
