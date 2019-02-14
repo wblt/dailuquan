@@ -17,6 +17,12 @@
 
 @implementation AddressViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.addressArr removeAllObjects];
+    [self requestData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"收货地址";
@@ -26,10 +32,8 @@
     self.tableView.rowHeight = 76;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView registerNib:[UINib nibWithNibName:@"AddressCell" bundle:nil] forCellReuseIdentifier:@"AddressCell"];
-    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addAddressAction)];
+    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(addAddressAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
-    
-    [self requestData];
 }
 
 - (void)requestData {
@@ -60,10 +64,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.addressArr.count;
 }
@@ -76,8 +76,7 @@
     cell.block = ^(AddressInfoModel * _Nonnull model) {
         [self AlertWithTitle:@"温馨提示" message:@"删除或修改收货地址" andOthers:@[@"删除",@"修改"] animated:YES action:^(NSInteger index) {
             if (index == 0) { // 删除
-                [weakSelf.addressArr removeObject:model];
-                [weakSelf.tableView reloadData];
+                [self deleteAddress:model];
             }else { // 修改
                 AddAddressVC *vc = [[AddAddressVC alloc] init];
                 vc.addressModel = model;
@@ -88,6 +87,27 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+
+
+- (void)deleteAddress:(AddressInfoModel *)model {
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:api_deleteReceivingAddress];
+    [params addParameter:@"uid" value:userModel.id];
+    [params addParameter:@"id" value:model.id];
+    
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        [SVProgressHUD showSuccessWithStatus:@"删除成功"];
+        [self.addressArr removeObject:model];
+        [self.tableView reloadData];
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
 }
 
 /*

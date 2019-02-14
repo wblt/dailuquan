@@ -17,6 +17,11 @@
 
 @implementation MyDeviceVC
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.dataSource removeAllObjects];
+    [self requestData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -28,10 +33,9 @@
     self.tableView.rowHeight = 68;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView registerNib:[UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeviceTableViewCell"];
-    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addDeviceAction)];
+    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(addDeviceAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
     
-    [self requestData];
 }
 
 - (void)requestData {
@@ -73,11 +77,10 @@
     cell.model = self.dataSource[indexPath.row];
     MJWeakSelf
     cell.block = ^(DevicesModel *model) {
-        [self AlertWithTitle:@"温馨提示" message:@"是否接触次设备的绑定" andOthers:@[@"取消",@"确定"] animated:YES action:^(NSInteger index) {
+        [self AlertWithTitle:@"温馨提示" message:@"是否解除设备的绑定" andOthers:@[@"取消",@"确定"] animated:YES action:^(NSInteger index) {
             
             if (index == 1) {
-                [weakSelf.dataSource removeObject:model];
-                [weakSelf.tableView reloadData];
+                [self unbindDevice:model];
             }
         }];
         
@@ -85,6 +88,25 @@
     return cell;
 }
 
+- (void)unbindDevice:(DevicesModel *)model {
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:api_unbindDevice];
+    [params addParameter:@"uid" value:userModel.id];
+    [params addParameter:@"id" value:model.id];
+    
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        [SVProgressHUD showSuccessWithStatus:@"解绑成功"];
+        [self.dataSource removeObject:model];
+        [self.tableView reloadData];
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

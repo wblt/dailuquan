@@ -44,7 +44,7 @@
         _address = self.addressModel.address;
         
         _nameLab.text = _name;
-        _phoneLab.text = _phoneLab;
+        _phoneLab.text = _phone;
         _pLab.text = _sheng;
         _cityLab.text = _shi;
         _disLab.text = _qu;
@@ -77,12 +77,33 @@
         [SVProgressHUD showInfoWithStatus:@"请填写详细地址"];
         return;
     }
-    
+    // 新增
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:self.addressModel?api_modifyReceivingAddress: api_addReceivingAddress];
+    [params addParameter:@"uid" value:userModel.id];
+    [params addParameter:@"address" value:_address];
+    [params addParameter:@"country" value:@"中国"];
+    [params addParameter:@"city" value:_shi];
+    [params addParameter:@"area" value:_qu];
+    [params addParameter:@"phone" value:_phone];
+    [params addParameter:@"name" value:_name];
+    [params addParameter:@"province" value:_sheng];
     if (self.addressModel) {
-        // 修改
-    }else {
-        // 新增
+        [params addParameter:@"id" value:self.addressModel.id];
     }
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        [SVProgressHUD showSuccessWithStatus:self.addressModel? @"修改成功":@"添加成功"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
 }
 
 - (IBAction)nameAction:(id)sender {

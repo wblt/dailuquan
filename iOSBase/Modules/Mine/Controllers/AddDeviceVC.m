@@ -46,6 +46,28 @@
         [SVProgressHUD showInfoWithStatus:@"请选择设备类型"];
         return;
     }
+    
+    UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
+    RequestParams *params = [[RequestParams alloc] initWithParams:api_bindingDevice];
+    [params addParameter:@"uid" value:userModel.id];
+    [params addParameter:@"nikName" value:_name];
+    [params addParameter:@"deviceId" value:_imei];
+    [params addParameter:@"deviceType" value:_type];
+    
+    [[NetworkSingleton shareInstace] httpPost:params withTitle:@"" successBlock:^(id data) {
+        NSString *code = data[@"code"];
+        if (![code isEqualToString:@"0"]) {
+            [SVProgressHUD showErrorWithStatus:data[@"message"]];
+            return ;
+        }
+        [SVProgressHUD showSuccessWithStatus:@"绑定成功"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+        
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络异常"];
+    }];
 }
 
 - (IBAction)nameAction:(UITapGestureRecognizer *)sender {

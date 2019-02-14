@@ -64,7 +64,11 @@
     if ([SPUtil boolForKey:k_app_login]) {
         UserInfoModel *userModel = [[BeanManager shareInstace] getBeanfromPath:UserModelPath];
         [self.headImgView sd_setImageWithURL:[NSURL URLWithString:userModel.portrait] placeholderImage:[UIImage imageNamed:@"me_head_portrait"]];
-        self.nameLab.text = userModel.nikeName;
+        if (userModel.nikeName.length == 0) {
+            self.nameLab.text = userModel.phone;
+        }else {
+            self.nameLab.text = userModel.nikeName;
+        }
         
         self.user_view.hidden = NO;
         self.visit_view.hidden = YES;

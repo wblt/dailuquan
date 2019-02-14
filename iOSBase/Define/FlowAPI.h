@@ -67,10 +67,10 @@
 #define api_vercode     SERVER_IP@"/tpiot/app/vercode"
 
 // 重置密码
-#define api_restpwd     SERVER_IP@"/tpiot/app/restpwd"
+#define api_restpwd     SERVER_IP@"/weixin/agedgame/modifyPassword"
 
 // 注册
-#define api_register     SERVER_IP@"/tpiot/app/register"
+#define api_register     SERVER_IP@"/weixin/agedgame/register"
 
 // 获取用户信息
 #define api_getusermessage     SERVER_IP@"/tpiot/app/getusermessage"
@@ -82,8 +82,24 @@
 //我的设备
 #define api_getDevices     SERVER_IP@"/weixin/agedgame/getDevices"
 
+// 绑定设备
+#define api_bindingDevice     SERVER_IP@"/weixin/agedgame/bindingDevice"
+
+// 解绑设备
+#define api_unbindDevice     SERVER_IP@"/weixin/agedgame/unbindDevice"
+
+
 // 收货地址
 #define api_getReceivingAddress     SERVER_IP@"/weixin/agedgame/getReceivingAddress"
+
+// 添加收货地址
+#define api_addReceivingAddress     SERVER_IP@"/weixin/agedgame/addReceivingAddress"
+
+// 修改收货地址
+#define api_modifyReceivingAddress     SERVER_IP@"/weixin/agedgame/modifyReceivingAddress"
+
+// 删除收货地址
+#define api_deleteReceivingAddress     SERVER_IP@"/weixin/agedgame/deleteReceivingAddress"
 
 // 积分
 #define api_getIntegral     SERVER_IP@"/weixin/agedgame/getIntegral"

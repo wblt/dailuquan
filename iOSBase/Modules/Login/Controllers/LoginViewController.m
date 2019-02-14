@@ -56,11 +56,11 @@
 #pragma mark - 登陆
 - (IBAction)loginAction:(id)sender {
     if (self.phoneNumFiled.text.length != 11) {
-        [SVProgressHUD showInfoWithStatus:@"请输入正确的手机号码"];
+        [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号码"];
         return;
     }
     if ([self.passwordFiled.text length] == 0) {
-        [SVProgressHUD showInfoWithStatus:@"密码不能为空"];
+        [SVProgressHUD showErrorWithStatus:@"密码不能为空"];
         return;
     }
     RequestParams *parms = [[RequestParams alloc] initWithParams:api_login];
@@ -72,14 +72,14 @@
         NSDictionary *dic = data;
         NSString *code = dic[@"code"];
         if ([code isEqualToString:@"0"]) {
-            [SVProgressHUD showInfoWithStatus:@"登录成功"];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
             [SPUtil setObject:self.phoneNumFiled.text forKey:k_app_userNumber];
             UserInfoModel *model = [UserInfoModel mj_objectWithKeyValues:data[@"data"]];
             [[BeanManager shareInstace] setBean:model path:UserModelPath];
             [SPUtil setBool:YES forKey:k_app_login];
             [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
-            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"登录失败-%@",dic[@"message"]]];
+            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"登录失败-%@",dic[@"message"]]];
         }
     } failureBlock:^(NSError *error) {
         [SVProgressHUD showInfoWithStatus:@"服务器请求出错,请联系管理员"];
