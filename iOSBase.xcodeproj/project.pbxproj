@@ -65,6 +65,8 @@
 		CF45B79E22145A5400DA69CD /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B79B22145A5400DA69CD /* UserInfoModel.m */; };
 		CF45B79F22145A5400DA69CD /* BeanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B79C22145A5400DA69CD /* BeanManager.m */; };
 		CF45B7A22214656600DA69CD /* HonorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7A12214656600DA69CD /* HonorModel.m */; };
+		CF45B7A622159EAE00DA69CD /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF45B7A422159EAE00DA69CD /* UserInfoVC.m */; };
+		CF45B7A722159EAE00DA69CD /* UserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF45B7A522159EAE00DA69CD /* UserInfoVC.xib */; };
 		EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112521E8DBF700D42C06 /* ScoreViewController.m */; };
 		EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112621E8DBF700D42C06 /* ScoreViewController.xib */; };
 		EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112A21E8DE0600D42C06 /* HonourViewController.m */; };
@@ -203,6 +205,9 @@
 		CF45B79D22145A5400DA69CD /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		CF45B7A02214656600DA69CD /* HonorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HonorModel.h; sourceTree = "<group>"; };
 		CF45B7A12214656600DA69CD /* HonorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HonorModel.m; sourceTree = "<group>"; };
+		CF45B7A322159EAE00DA69CD /* UserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
+		CF45B7A422159EAE00DA69CD /* UserInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
+		CF45B7A522159EAE00DA69CD /* UserInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoVC.xib; sourceTree = "<group>"; };
 		EE30112421E8DBF700D42C06 /* ScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		EE30112521E8DBF700D42C06 /* ScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		EE30112621E8DBF700D42C06 /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
@@ -619,6 +624,9 @@
 				CF45B793221440BE00DA69CD /* AddAddressVC.xib */,
 				EE30113821E8E88900D42C06 /* InformationViewController.h */,
 				EE30113921E8E88900D42C06 /* InformationViewController.m */,
+				CF45B7A322159EAE00DA69CD /* UserInfoVC.h */,
+				CF45B7A422159EAE00DA69CD /* UserInfoVC.m */,
+				CF45B7A522159EAE00DA69CD /* UserInfoVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -837,6 +845,7 @@
 				EE98FBF021DE503100E3DBA0 /* QuanziViewController.xib in Resources */,
 				EE98FBFF21DE529B00E3DBA0 /* MineViewController.xib in Resources */,
 				363854612004C4FA00899B11 /* README.md in Resources */,
+				CF45B7A722159EAE00DA69CD /* UserInfoVC.xib in Resources */,
 				EE98FBFA21DE51DD00E3DBA0 /* JingpaiViewController.xib in Resources */,
 				36104EB721EEC55300F03AEB /* README.md in Resources */,
 				363854572004C0C200899B11 /* README.md in Resources */,
@@ -966,6 +975,7 @@
 				CF45B7A22214656600DA69CD /* HonorModel.m in Sources */,
 				363854262004997200899B11 /* RequestParams.m in Sources */,
 				3638542B20049D8500899B11 /* BaseNavViewController.m in Sources */,
+				CF45B7A622159EAE00DA69CD /* UserInfoVC.m in Sources */,
 				363854252004997200899B11 /* NetworkSingleton.m in Sources */,
 				CF45B7822214347700DA69CD /* MyDeviceVC.m in Sources */,
 				CF45B794221440BE00DA69CD /* AddAddressVC.m in Sources */,

@@ -15,6 +15,7 @@
 #import "AddressViewController.h"
 #import "InformationViewController.h"
 #import "MyDeviceVC.h"
+#import "UserInfoVC.h"
 
 @interface MineViewController ()
 @property (weak, nonatomic) IBOutlet UIView *user_view;
@@ -121,7 +122,7 @@
 }
 
 - (IBAction)toInfoVC:(UITapGestureRecognizer *)sender {
-    InformationViewController *info = [[InformationViewController alloc] init];
+    UserInfoVC *info = [[UserInfoVC alloc] init];
     [self.navigationController pushViewController:info animated:YES];
 }
 
