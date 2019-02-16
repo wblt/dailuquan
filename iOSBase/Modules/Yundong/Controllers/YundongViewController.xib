@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YundongViewController">
             <connections>
+                <outlet property="bikeBtn" destination="05R-GQ-EVW" id="CXJ-f9-eg7"/>
+                <outlet property="healthBtn" destination="Lys-um-lWX" id="c99-OQ-gVw"/>
+                <outlet property="runBtn" destination="Dgs-dv-fQ8" id="EnD-vg-Sfe"/>
+                <outlet property="startbtn" destination="br7-jB-O3a" id="P52-IT-rsU"/>
+                <outlet property="timeLab" destination="ySa-HP-l8h" id="SM1-6X-Uya"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walkBtn" destination="dQZ-aE-dRI" id="alb-Dg-DDf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,6 +37,9 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="walkAction:" destination="-1" eventType="touchUpInside" id="6SK-O2-uTS"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-dv-fQ8">
                     <rect key="frame" x="94" y="0.0" width="93.5" height="60"/>
@@ -41,6 +50,9 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="runAction:" destination="-1" eventType="touchUpInside" id="RvO-gi-Mrv"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-um-lWX">
                     <rect key="frame" x="187.5" y="0.0" width="94" height="60"/>
@@ -51,6 +63,9 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="healthWalkAction:" destination="-1" eventType="touchUpInside" id="XQr-Nk-uR2"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05R-GQ-EVW">
                     <rect key="frame" x="281.5" y="0.0" width="93.5" height="60"/>
@@ -61,12 +76,15 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="bikeAction:" destination="-1" eventType="touchUpInside" id="Apy-nc-Jey"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motion_semicircle" translatesAutoresizingMaskIntoConstraints="NO" id="cPQ-D8-UhD">
                     <rect key="frame" x="74.5" y="207" width="226" height="133"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxH-xJ-ksv">
-                    <rect key="frame" x="183.5" y="263" width="8" height="21"/>
+                    <rect key="frame" x="184" y="263" width="7.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -86,6 +104,10 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="开始"/>
+                    <state key="selected" title="结束"/>
+                    <connections>
+                        <action selector="startAction:" destination="-1" eventType="touchUpInside" id="4o6-oU-Ds6"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMf-e6-Fre">
                     <rect key="frame" x="0.0" y="439" width="375" height="128"/>
@@ -250,9 +272,16 @@
                     <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-HP-l8h">
+                    <rect key="frame" x="156" y="291" width="64" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="br7-jB-O3a" firstAttribute="top" secondItem="ySa-HP-l8h" secondAttribute="bottom" constant="5" id="46M-yt-bA1"/>
                 <constraint firstItem="Dgs-dv-fQ8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7r2-Zr-mBS"/>
                 <constraint firstItem="TUr-gS-XAG" firstAttribute="top" secondItem="7HF-Oc-wvq" secondAttribute="bottom" constant="1" id="BSx-RQ-UpT"/>
                 <constraint firstAttribute="trailing" secondItem="SMf-e6-Fre" secondAttribute="trailing" id="Djv-fW-aTm"/>
@@ -266,6 +295,7 @@
                 <constraint firstItem="d0R-AX-1gS" firstAttribute="centerY" secondItem="KxH-xJ-ksv" secondAttribute="centerY" constant="-10" id="Z4W-XT-HSS"/>
                 <constraint firstItem="Lys-um-lWX" firstAttribute="leading" secondItem="Dgs-dv-fQ8" secondAttribute="trailing" id="bsz-eO-P46"/>
                 <constraint firstItem="SMf-e6-Fre" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bta-eD-eEJ"/>
+                <constraint firstItem="ySa-HP-l8h" firstAttribute="centerX" secondItem="br7-jB-O3a" secondAttribute="centerX" id="dHa-hx-nhc"/>
                 <constraint firstItem="KxH-xJ-ksv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-60" id="ddt-jv-rre"/>
                 <constraint firstItem="Lys-um-lWX" firstAttribute="centerY" secondItem="dQZ-aE-dRI" secondAttribute="centerY" id="e3y-wR-KJW"/>
                 <constraint firstItem="05R-GQ-EVW" firstAttribute="centerY" secondItem="dQZ-aE-dRI" secondAttribute="centerY" id="eMb-rP-PqM"/>
@@ -286,7 +316,7 @@
                 <constraint firstItem="7HF-Oc-wvq" firstAttribute="top" secondItem="cPQ-D8-UhD" secondAttribute="top" id="xSf-db-Jxn"/>
                 <constraint firstItem="Dgs-dv-fQ8" firstAttribute="centerY" secondItem="dQZ-aE-dRI" secondAttribute="centerY" id="xfT-K8-CgZ"/>
             </constraints>
-            <point key="canvasLocation" x="63.200000000000003" y="79.610194902548727"/>
+            <point key="canvasLocation" x="62.5" y="79.5"/>
         </view>
     </objects>
     <resources>
