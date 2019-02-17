@@ -77,6 +77,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
   install_resource "BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle"
   install_resource "GPUImage/framework/Resources/lookup.png"
   install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
@@ -90,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AMap2DMap/MAMapKit.framework/AMap.bundle"
   install_resource "BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle"
   install_resource "GPUImage/framework/Resources/lookup.png"
   install_resource "GPUImage/framework/Resources/lookup_amatorka.png"

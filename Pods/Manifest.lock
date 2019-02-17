@@ -14,6 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMap2DMap (5.6.1):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.5.6)
+  - AMapLocation (2.6.1):
+    - AMapFoundation (~> 1.4)
   - BGFMDB (2.0.13):
     - BGFMDB/BG (= 2.0.13)
     - BGFMDB/FMDB (= 2.0.13)
@@ -41,6 +46,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - AMap2DMap
+  - AMapLocation
   - BGFMDB (~> 2.0.9)
   - BRPickerView
   - GPUImage
@@ -58,6 +65,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap2DMap: cac76bc057de18a1641f34df6b50bf5bc6b23571
+  AMapFoundation: 20fce2a12cd152e1092afdd04379cdac21932185
+  AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
   BRPickerView: 0590a8c5de9bd98c6b4e4f117a3dff6de287d5b2
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
@@ -74,6 +84,6 @@ SPEC CHECKSUMS:
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 4d99254809f6bc276deffbe138ed4e4f408029bc
+PODFILE CHECKSUM: 79e39ca307f52eb59974ac0638d86b5e1496a854
 
 COCOAPODS: 1.2.0

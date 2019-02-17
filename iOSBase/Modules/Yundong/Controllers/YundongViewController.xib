@@ -12,9 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YundongViewController">
             <connections>
                 <outlet property="bikeBtn" destination="05R-GQ-EVW" id="CXJ-f9-eg7"/>
+                <outlet property="distanceLab" destination="FnB-dT-Zqc" id="INO-E5-nUT"/>
                 <outlet property="healthBtn" destination="Lys-um-lWX" id="c99-OQ-gVw"/>
+                <outlet property="powerLab" destination="uSL-aX-jU1" id="uxi-2M-9bR"/>
                 <outlet property="runBtn" destination="Dgs-dv-fQ8" id="EnD-vg-Sfe"/>
+                <outlet property="speedLab" destination="yZo-4n-1Dr" id="zka-od-Ytr"/>
+                <outlet property="spendW" destination="BQr-dV-8rs" id="OyE-lQ-4bL"/>
                 <outlet property="startbtn" destination="br7-jB-O3a" id="P52-IT-rsU"/>
+                <outlet property="stepCountLab" destination="KxH-xJ-ksv" id="CgD-kB-fbR"/>
                 <outlet property="timeLab" destination="ySa-HP-l8h" id="SM1-6X-Uya"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="walkBtn" destination="dQZ-aE-dRI" id="alb-Dg-DDf"/>
@@ -265,6 +270,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HF-Oc-wvq">
                     <rect key="frame" x="275.5" y="207" width="25" height="24"/>
                     <state key="normal" image="motion_trajectory"/>
+                    <connections>
+                        <action selector="trackAction:" destination="-1" eventType="touchUpInside" id="Edd-5K-so0"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="轨迹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUr-gS-XAG">
                     <rect key="frame" x="275.5" y="232" width="25" height="14.5"/>

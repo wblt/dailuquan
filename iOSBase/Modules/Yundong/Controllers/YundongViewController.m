@@ -7,7 +7,12 @@
 //
 
 #import "YundongViewController.h"
-#import <CoreMotion/CoreMotion.h>
+#import "MotionDetector.h"
+#import "TrackMapViewController.h"
+
+
+CGFloat weight = 60;
+BOOL humState=NO;
 
 @interface YundongViewController ()
 @property(nonatomic,assign)BOOL isStart;// 开始记录
@@ -19,10 +24,16 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLab;
 @property(nonatomic,assign)NSInteger seconds;
-@property(nonatomic,strong) NSTimer *myTimer;
+@property(nonatomic,strong)NSTimer *myTimer;
+@property(nonatomic,strong)NSMutableArray *distancearray;
+@property(nonatomic,assign)int StepCount;
+@property (weak, nonatomic) IBOutlet UILabel *stepCountLab;
 
-@property (nonatomic,strong)CMStepCounter *stepCounter;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *spendW;
 
+@property (weak, nonatomic) IBOutlet UILabel *speedLab;
+@property (weak, nonatomic) IBOutlet UILabel *powerLab;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLab;
 @end
 
 @implementation YundongViewController
@@ -31,29 +42,12 @@
     [super viewDidLoad];
     self.title = @"运动";
     _seconds = 0;
+    self.distancearray = [NSMutableArray array];
+    
     UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(moreAction)];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shareAction)];
     self.navigationItem.rightBarButtonItem = rigthBarItem;
-    
-    // 1. 创建计步器
-    self.stepCounter = [[CMStepCounter alloc]init];
-    
-    // 2. 开始计步
-    
-    /**
-     *  开始计步
-     *
-     *  @param UpdatesToQueue 执行回调的队列
-     *  @param updateOn       从第几步开始计算
-     *  @param Handler        回调
-     *
-     */
-    [self.stepCounter startStepCountingUpdatesToQueue:[NSOperationQueue mainQueue] updateOn:1 withHandler:^(NSInteger numberOfSteps, NSDate * _Nonnull timestamp, NSError * _Nullable error) {
-        NSLog(@"%s",__func__);
-        NSLog(@"%zd",numberOfSteps);
-        
-    }];
     
 }
 
@@ -117,12 +111,20 @@
         // 开始计时
         self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(start:) userInfo:nil repeats:YES];
         _isStart = YES;
+        [self state];
     }else {
         // 结束计时
         _seconds = 0;
         [self.myTimer invalidate];
         self.myTimer = nil;
         _isStart = NO;
+        [[MotionDetector sharedInstance] stopDetection];
+        _speedLab.text = @"_";
+        _powerLab.text = @"_";
+        _stepCountLab.text = @"_";
+        _StepCount = 0;
+        _distanceLab.text = @"_";
+        [self.distancearray removeAllObjects];
     }
 }
 
@@ -130,6 +132,81 @@
     _seconds ++;
     self.timeLab.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",_seconds/3600,(_seconds%3600)/60,_seconds%60];
 }
+
+-(void)state
+{
+    [MotionDetector sharedInstance].motionTypeChange = ^(MotionType Type){
+        if (Type==0) {
+          // statelabel.text = @"开始运动吧!！";
+        }
+        if (Type==1) {
+            
+          //  statelabel.text = @"正在走路！";
+        }
+        if (Type==2) {
+            
+          //   statelabel.text = @"正在奔跑！";
+        }
+        if (Type==3) {
+            
+          //  statelabel.text = @"正在使用交通工具！";
+        }
+    };
+    
+    
+    
+    [MotionDetector sharedInstance].locationChange=^(CLLocationDistance meters,CGFloat speed){
+        _speedLab.text = [NSString stringWithFormat:@"%.2fm/s",speed];
+        _distanceLab.text = [NSString stringWithFormat:@"%.0fm",meters];
+        [self.distancearray addObject:[NSNumber numberWithFloat:meters]];
+        NSUInteger index = self.distancearray.count-1;
+        NSLog(@"%lu",(unsigned long)self.distancearray.count);
+        if (self.distancearray.count>2) {
+            CGFloat kcalo = weight*meters/1000*1.036;
+            _powerLab.text = [NSString stringWithFormat:@"%.2f",kcalo];
+            CGFloat meter1 = [[self.distancearray objectAtIndex:index-1]floatValue];
+            CGFloat meter2 = [[self.distancearray objectAtIndex:index]floatValue];
+            CGFloat distance = meter2-meter1;
+            if (humState == NO) {
+                if (distance>0.8f) {
+                    int number = distance/0.8;
+                    _StepCount=_StepCount+number;
+                    _stepCountLab.text = [NSString stringWithFormat:@"%d",_StepCount];
+                    //animationview.image = [UIImage imageNamed:@"centerXin6"];
+                }else{
+                   // animationview.image = [UIImage imageNamed:@"centerXin1"];
+                }
+            }
+        }
+        
+    };
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        [MotionDetector sharedInstance].Ios7Available = YES;
+    }
+    
+    [LocationManager sharedInstance].allowsBackground = YES;
+    
+    [[MotionDetector sharedInstance] startUpdate:^(BOOL humanState) {
+        humState = humanState;
+        if (humanState==YES) {
+           // animationview.image = [UIImage imageNamed:@"centerXin6"];
+            _StepCount++;
+            _stepCountLab.text = [NSString stringWithFormat:@"%d",_StepCount];
+        }else{
+            //animationview.image = [UIImage imageNamed:@"centerXin1"];
+        }
+        
+    }];
+    
+}
+
+- (IBAction)trackAction:(id)sender {
+    TrackMapViewController *vc = [[TrackMapViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 - (void)moreAction {
     

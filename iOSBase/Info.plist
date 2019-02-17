@@ -67,5 +67,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>开始运动时需要持续获取用户定位信息</string>
+	<key>NSLocationUsageDescription</key>
+	<string>永不允许访问位置信息</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>使用期间需要允许访问用户的定位信息</string>
+    <!-- 运动与健身 -->
+    <key>NSMotionUsageDescription</key> <string>App需要您的同意,才能访问运动与健身</string> 
 </dict>
 </plist>

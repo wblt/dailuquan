@@ -51,6 +51,21 @@
 #define DLog(...)
 #endif
 
+
+//判断系统是否为7.0以上
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+//通知
+#define LOCATIONCHANGE @"change"
+#define LOCATIONFAIL @"fail"
+#define LOCATIONSTATE @"state"
+#define LOCATIONPAUSE @"pause"
+//屏幕大小
+#define KWIDTH [UIScreen mainScreen].bounds.size.width
+#define KHEIGHT [UIScreen mainScreen].bounds.size.height
+//更新时间
+#define UPDATATIME 0.2f
+
+
 //获取屏幕宽高
 #define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height

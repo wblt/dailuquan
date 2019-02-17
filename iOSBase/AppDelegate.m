@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import "TabbarViewController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AMapServices sharedServices].apiKey =@"d6e3cde481768e3cf7130a70140f2521";
+    
     // 创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;

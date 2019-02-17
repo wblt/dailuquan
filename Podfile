@@ -17,4 +17,8 @@ pod 'SDCycleScrollView'
 
 pod 'BRPickerView'
 
+#高德地图
+pod 'AMap2DMap'
+pod 'AMapLocation'
+
 end
