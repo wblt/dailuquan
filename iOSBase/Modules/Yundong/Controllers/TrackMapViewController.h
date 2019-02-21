@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface TrackMapViewController : BaseViewController
+@property(nonatomic,copy)NSArray *locationar;
 
 @end

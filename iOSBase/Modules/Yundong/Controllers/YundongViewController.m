@@ -16,6 +16,7 @@ BOOL humState=NO;
 
 @interface YundongViewController ()
 @property(nonatomic,assign)BOOL isStart;// 开始记录
+@property (weak, nonatomic) IBOutlet UIButton *startBtn;
 @property (weak, nonatomic) IBOutlet UIButton *walkBtn;
 @property (weak, nonatomic) IBOutlet UIButton *runBtn;
 @property (weak, nonatomic) IBOutlet UIButton *healthBtn;
@@ -34,6 +35,11 @@ BOOL humState=NO;
 @property (weak, nonatomic) IBOutlet UILabel *speedLab;
 @property (weak, nonatomic) IBOutlet UILabel *powerLab;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLab;
+@property (weak, nonatomic) IBOutlet UILabel *totalTimeLab;
+
+
+@property(nonatomic,strong)NSArray *locationar;
+
 @end
 
 @implementation YundongViewController
@@ -125,6 +131,7 @@ BOOL humState=NO;
         _StepCount = 0;
         _distanceLab.text = @"_";
         [self.distancearray removeAllObjects];
+        self.locationar = [NSArray array];
     }
 }
 
@@ -153,10 +160,14 @@ BOOL humState=NO;
         }
     };
     
-    
-    
-    [MotionDetector sharedInstance].locationChange=^(CLLocationDistance meters,CGFloat speed){
-        _speedLab.text = [NSString stringWithFormat:@"%.2fm/s",speed];
+    [MotionDetector sharedInstance].locationChange=^(CLLocationDistance meters,CGFloat speed, NSArray *locationarr){
+        self.locationar = locationarr;
+        _totalTimeLab.text = [NSString stringWithFormat:@"%.01f",(float)(_seconds/(60*60))];
+        if (speed > 0) {
+          _speedLab.text = [NSString stringWithFormat:@"%.2f", 1000/(speed*60)];
+        }else {
+        _speedLab.text = [NSString stringWithFormat:@"%.2f", speed];
+        }
         _distanceLab.text = [NSString stringWithFormat:@"%.0fm",meters];
         [self.distancearray addObject:[NSNumber numberWithFloat:meters]];
         NSUInteger index = self.distancearray.count-1;
@@ -198,15 +209,15 @@ BOOL humState=NO;
         }
         
     }];
-    
 }
 
 - (IBAction)trackAction:(id)sender {
     TrackMapViewController *vc = [[TrackMapViewController alloc] init];
+    if (self.locationar.count > 0) {
+        vc.locationar = self.locationar;
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
-
-
 
 - (void)moreAction {
     

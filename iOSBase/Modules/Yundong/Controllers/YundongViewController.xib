@@ -18,9 +18,11 @@
                 <outlet property="runBtn" destination="Dgs-dv-fQ8" id="EnD-vg-Sfe"/>
                 <outlet property="speedLab" destination="yZo-4n-1Dr" id="zka-od-Ytr"/>
                 <outlet property="spendW" destination="BQr-dV-8rs" id="OyE-lQ-4bL"/>
+                <outlet property="startBtn" destination="br7-jB-O3a" id="L8L-zO-kQ4"/>
                 <outlet property="startbtn" destination="br7-jB-O3a" id="P52-IT-rsU"/>
                 <outlet property="stepCountLab" destination="KxH-xJ-ksv" id="CgD-kB-fbR"/>
                 <outlet property="timeLab" destination="ySa-HP-l8h" id="SM1-6X-Uya"/>
+                <outlet property="totalTimeLab" destination="rzd-Xj-CHr" id="2uz-Uc-est"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="walkBtn" destination="dQZ-aE-dRI" id="alb-Dg-DDf"/>
             </connections>

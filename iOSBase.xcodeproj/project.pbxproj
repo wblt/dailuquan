@@ -71,6 +71,7 @@
 		CF52A74E22192FAF0061E414 /* TrackMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF52A74C22192FAF0061E414 /* TrackMapViewController.xib */; };
 		CF52A754221935F50061E414 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52A750221935F50061E414 /* LocationManager.m */; };
 		CF52A755221935F50061E414 /* MotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52A753221935F50061E414 /* MotionDetector.m */; };
+		CF52A7CE221ECD590061E414 /* MASmoothPathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52A7CD221ECD590061E414 /* MASmoothPathTool.m */; };
 		EE30112721E8DBF700D42C06 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112521E8DBF700D42C06 /* ScoreViewController.m */; };
 		EE30112821E8DBF700D42C06 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE30112621E8DBF700D42C06 /* ScoreViewController.xib */; };
 		EE30112C21E8DE0600D42C06 /* HonourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE30112A21E8DE0600D42C06 /* HonourViewController.m */; };
@@ -219,6 +220,8 @@
 		CF52A751221935F50061E414 /* MotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionDetector.h; sourceTree = "<group>"; };
 		CF52A752221935F50061E414 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		CF52A753221935F50061E414 /* MotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionDetector.m; sourceTree = "<group>"; };
+		CF52A7CC221ECD590061E414 /* MASmoothPathTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASmoothPathTool.h; sourceTree = "<group>"; };
+		CF52A7CD221ECD590061E414 /* MASmoothPathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASmoothPathTool.m; sourceTree = "<group>"; };
 		EE30112421E8DBF700D42C06 /* ScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		EE30112521E8DBF700D42C06 /* ScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		EE30112621E8DBF700D42C06 /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 				CF52A74A22192FAF0061E414 /* TrackMapViewController.h */,
 				CF52A74B22192FAF0061E414 /* TrackMapViewController.m */,
 				CF52A74C22192FAF0061E414 /* TrackMapViewController.xib */,
+				CF52A7CC221ECD590061E414 /* MASmoothPathTool.h */,
+				CF52A7CD221ECD590061E414 /* MASmoothPathTool.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1011,6 +1016,7 @@
 				CF52A754221935F50061E414 /* LocationManager.m in Sources */,
 				CF45B794221440BE00DA69CD /* AddAddressVC.m in Sources */,
 				EE98FBF421DE512A00E3DBA0 /* YundongViewController.m in Sources */,
+				CF52A7CE221ECD590061E414 /* MASmoothPathTool.m in Sources */,
 				CF45B7982214533800DA69CD /* AddressInfoModel.m in Sources */,
 				3638541C2004981D00899B11 /* UIView+Extend.m in Sources */,
 				EE98FBD521DE49B400E3DBA0 /* LoginViewController.m in Sources */,
